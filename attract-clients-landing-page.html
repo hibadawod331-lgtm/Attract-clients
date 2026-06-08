@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Attract Clients Naturally Through Instagram – Free Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+  /* ── TOKENS ─────────────────────────────────────── */
+  :root {
+    --cream:    #FAF7F4;
+    --warm:     #F5EFE8;
+    --blush:    #E8D5C4;
+    --rose:     #C8957A;
+    --rose-dk:  #A87260;
+    --mocha:    #5C3D2E;
+    --charcoal: #2C2420;
+    --gold:     #C9A96E;
+    --gold-lt:  #E8D5A3;
+    --white:    #FFFFFF;
+    --shadow:   rgba(92,61,46,0.12);
+    --ff-serif: 'Cormorant Garamond', Georgia, serif;
+    --ff-sans:  'DM Sans', sans-serif;
+    --radius:   18px;
+    --transition: 0.35s cubic-bezier(.22,.68,0,1.2);
+  }
+
+  /* ── RESET ───────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--ff-sans);
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── UTILITY ─────────────────────────────────────── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 96px 0; }
+  .section--alt { background: var(--warm); }
+  .tag {
+    display: inline-block;
+    font-family: var(--ff-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--rose);
+    background: rgba(200,149,122,.12);
+    border: 1px solid rgba(200,149,122,.3);
+    border-radius: 50px;
+    padding: 6px 18px;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: var(--ff-serif);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--mocha);
+    margin-bottom: 18px;
+  }
+  .section-sub {
+    font-size: 17px;
+    color: #7a5c4e;
+    max-width: 560px;
+    line-height: 1.7;
+  }
+  .divider {
+    width: 54px; height: 2px;
+    background: linear-gradient(90deg, var(--rose), var(--gold));
+    border-radius: 2px;
+    margin: 24px 0;
+  }
+
+  /* ── ANIMATIONS ──────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(30px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0px) rotate(-1deg); }
+    50%      { transform: translateY(-12px) rotate(1deg); }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+  }
+  @keyframes pulse-ring {
+    0%   { transform: scale(1); opacity:.6; }
+    100% { transform: scale(1.6); opacity:0; }
+  }
+  .fade-up { animation: fadeUp .8s ease both; }
+  .delay-1 { animation-delay: .15s; }
+  .delay-2 { animation-delay: .3s; }
+  .delay-3 { animation-delay: .45s; }
+  .delay-4 { animation-delay: .6s; }
+
+  /* Scroll reveal */
+  .reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* ── NOISE TEXTURE OVERLAY ───────────────────────── */
+  body::before {
+    content:'';
+    position:fixed; inset:0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events:none;
+    z-index:1000;
+    opacity:.4;
+  }
+
+  /* ── HERO ────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse 70% 60% at 70% 40%, rgba(200,149,122,.18) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 10% 90%, rgba(201,169,110,.14) 0%, transparent 60%),
+      var(--cream);
+    display: flex;
+    align-items: center;
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content:'';
+    position:absolute;
+    bottom: -2px; left:0; right:0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--cream));
+  }
+  /* Decorative circles */
+  .hero-deco {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-deco-1 {
+    width: 420px; height: 420px;
+    border: 1px solid rgba(200,149,122,.2);
+    top: -120px; right: -80px;
+  }
+  .hero-deco-2 {
+    width: 260px; height: 260px;
+    border: 1px solid rgba(201,169,110,.18);
+    bottom: 40px; left: -60px;
+  }
+  .hero-deco-3 {
+    width: 30px; height: 30px;
+    background: var(--gold-lt);
+    opacity: .5;
+    top: 25%; right: 35%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-content {}
+  .hero-headline {
+    font-family: var(--ff-serif);
+    font-size: clamp(38px, 5.5vw, 68px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--mocha);
+    margin-bottom: 22px;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--rose);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: #7a5c4e;
+    line-height: 1.75;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+  .free-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--gold-lt), var(--blush));
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mocha);
+    margin-bottom: 28px;
+    border: 1px solid rgba(201,169,110,.3);
+  }
+  .free-badge::before { content:'✦'; color: var(--gold); }
+
+  /* ── FORM CARD ───────────────────────────────────── */
+  .form-card {
+    background: var(--white);
+    border-radius: 28px;
+    padding: 44px 40px;
+    box-shadow: 0 20px 60px rgba(92,61,46,.12), 0 2px 8px rgba(92,61,46,.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .form-card::before {
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rose), var(--gold), var(--rose));
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+  .form-card-title {
+    font-family: var(--ff-serif);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--mocha);
+    margin-bottom: 6px;
+  }
+  .form-card-sub {
+    font-size: 14px;
+    color: #9a7a6e;
+    margin-bottom: 28px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mocha);
+    margin-bottom: 8px;
+    letter-spacing: .02em;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid var(--blush);
+    border-radius: 12px;
+    font-family: var(--ff-sans);
+    font-size: 15px;
+    color: var(--charcoal);
+    background: var(--cream);
+    outline: none;
+    transition: border-color .25s, box-shadow .25s, background .25s;
+  }
+  .form-group input::placeholder { color: #bba898; }
+  .form-group input:focus {
+    border-color: var(--rose);
+    box-shadow: 0 0 0 4px rgba(200,149,122,.12);
+    background: var(--white);
+  }
+  .btn-primary {
+    width: 100%;
+    padding: 17px 28px;
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dk) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 14px;
+    font-family: var(--ff-sans);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+    letter-spacing: .02em;
+  }
+  .btn-primary::after {
+    content:'';
+    position:absolute; inset:0;
+    background: linear-gradient(135deg, rgba(255,255,255,.12), transparent);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(168,114,96,.4);
+  }
+  .btn-primary:active { transform: translateY(0); }
+  .form-privacy {
+    text-align: center;
+    font-size: 12px;
+    color: #bba898;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .form-privacy::before { content:'🔒'; font-size:12px; }
+
+  /* Mockup visual */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mockup-wrap {
+    position: relative;
+    animation: float 7s ease-in-out infinite;
+  }
+  .mockup-wrap::before {
+    content:'';
+    position:absolute;
+    inset: -30px;
+    background: radial-gradient(ellipse at center, rgba(200,149,122,.2), transparent 70%);
+    pointer-events:none;
+  }
+  .mockup {
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(145deg, var(--mocha) 0%, #3a2218 100%);
+    border-radius: 20px;
+    box-shadow: 0 40px 80px rgba(92,61,46,.35), 0 8px 20px rgba(92,61,46,.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .mockup::before {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(201,169,110,.25), transparent),
+      radial-gradient(ellipse 60% 60% at 80% 80%, rgba(200,149,122,.15), transparent);
+  }
+  .mockup-ornament {
+    font-size: 34px;
+    margin-bottom: 18px;
+    position:relative;
+    z-index:2;
+  }
+  .mockup-label {
+    font-family: var(--ff-sans);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    position:relative;z-index:2;
+  }
+  .mockup-title {
+    font-family: var(--ff-serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 18px;
+    position:relative;z-index:2;
+  }
+  .mockup-title em { font-style: italic; color: var(--gold-lt); }
+  .mockup-divider {
+    width: 40px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 16px;
+    position:relative;z-index:2;
+  }
+  .mockup-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,.55);
+    letter-spacing: .06em;
+    position:relative;z-index:2;
+  }
+  .mockup-corner {
+    position: absolute;
+    top:16px; right:16px;
+    width: 36px; height: 36px;
+    border-top: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+    border-radius: 0 6px 0 0;
+    opacity: .5;
+  }
+  .mockup-corner-bl {
+    top: auto; right: auto;
+    bottom: 16px; left: 16px;
+    border-top: none; border-right: none;
+    border-bottom: 2px solid var(--gold);
+    border-left: 2px solid var(--gold);
+    border-radius: 0 0 0 6px;
+  }
+
+  /* Floating proof chips */
+  .proof-chip {
+    position: absolute;
+    background: var(--white);
+    border-radius: 50px;
+    padding: 10px 16px;
+    box-shadow: 0 8px 24px rgba(92,61,46,.14);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mocha);
+    white-space: nowrap;
+    display: flex; align-items:center; gap:8px;
+  }
+  .proof-chip span { font-size: 16px; }
+  .chip-1 { bottom: -18px; left: -30px; animation: float 5s ease-in-out infinite .5s; }
+  .chip-2 { top: 30px; right: -50px; animation: float 6s ease-in-out infinite 1s; }
+
+  /* ── BENEFITS ─────────────────────────────────────── */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+  }
+  .benefit-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    border: 1px solid rgba(200,149,122,.15);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .benefit-card::before {
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0; height:3px;
+    background: linear-gradient(90deg, var(--rose), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s ease;
+    border-radius: 3px 3px 0 0;
+  }
+  .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(92,61,46,.12); border-color: rgba(200,149,122,.3); }
+  .benefit-card:hover::before { transform: scaleX(1); }
+  .benefit-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, rgba(200,149,122,.15), rgba(201,169,110,.1));
+    border-radius: 14px;
+    display: flex; align-items:center; justify-content:center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .benefit-title {
+    font-family: var(--ff-serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--mocha);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .benefit-desc {
+    font-size: 14px;
+    color: #7a5c4e;
+    line-height: 1.7;
+  }
+
+  /* ── INSIDE THE GUIDE ─────────────────────────────── */
+  .guide-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 56px;
+  }
+  .guide-lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .guide-lesson {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 22px 24px;
+    background: var(--white);
+    border-radius: 14px;
+    border: 1px solid rgba(200,149,122,.15);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .guide-lesson:hover { transform: translateX(6px); box-shadow: 0 8px 24px rgba(92,61,46,.08); }
+  .lesson-num {
+    font-family: var(--ff-serif);
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--rose);
+    opacity: .6;
+    line-height: 1;
+    min-width: 36px;
+  }
+  .lesson-content {}
+  .lesson-title {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--mocha);
+    margin-bottom: 4px;
+  }
+  .lesson-desc {
+    font-size: 13px;
+    color: #9a7a6e;
+    line-height: 1.6;
+  }
+  .guide-visual {
+    position: sticky;
+    top: 100px;
+  }
+  .guide-preview {
+    background: linear-gradient(145deg, var(--mocha), #2a1a10);
+    border-radius: 24px;
+    padding: 48px 36px;
+    text-align: center;
+    box-shadow: 0 32px 64px rgba(92,61,46,.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .guide-preview::before {
+    content:'';
+    position:absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(201,169,110,.2), transparent 70%);
+  }
+  .guide-preview-pages {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 28px;
+    position:relative;z-index:2;
+  }
+  .page-thumb {
+    width: 56px; height: 72px;
+    background: rgba(255,255,255,.08);
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,.1);
+  }
+  .page-thumb:nth-child(2) {
+    width: 72px; height: 88px;
+    background: rgba(255,255,255,.12);
+    margin-top: -8px;
+    border-color: rgba(201,169,110,.3);
+  }
+  .guide-preview-title {
+    font-family: var(--ff-serif);
+    font-size: 22px;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 14px;
+    position:relative;z-index:2;
+  }
+  .guide-preview-title em { color: var(--gold-lt); font-style: italic; }
+  .guide-preview-cta {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, var(--rose), var(--rose-dk));
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+    border: none;
+    font-family: var(--ff-sans);
+    position:relative;z-index:2;
+  }
+  .guide-preview-cta:hover { transform: scale(1.04); box-shadow: 0 8px 24px rgba(168,114,96,.4); }
+
+  /* ── ABOUT ─────────────────────────────────────────── */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 16px;
+  }
+  .about-photo-wrap {
+    position: relative;
+  }
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(145deg, var(--blush), var(--warm));
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff-serif);
+    font-size: 80px;
+    color: var(--rose);
+    opacity: .5;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-photo::before {
+    content:'';
+    position:absolute; inset:0;
+    background: radial-gradient(ellipse at 40% 30%, rgba(200,149,122,.15), transparent 60%);
+  }
+  .about-photo-badge {
+    position: absolute;
+    bottom: -16px; right: -16px;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 24px rgba(92,61,46,.15);
+    text-align: center;
+  }
+  .badge-num {
+    font-family: var(--ff-serif);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--rose);
+    line-height: 1;
+  }
+  .badge-label {
+    font-size: 11px;
+    color: #9a7a6e;
+    letter-spacing: .05em;
+    max-width: 80px;
+    line-height: 1.4;
+  }
+  .about-text {}
+  .about-name {
+    font-family: var(--ff-serif);
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--mocha);
+    margin-bottom: 6px;
+  }
+  .about-role {
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .about-bio {
+    font-size: 16px;
+    color: #5e4038;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  .about-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .value-pill {
+    padding: 8px 18px;
+    background: rgba(200,149,122,.1);
+    border: 1px solid rgba(200,149,122,.25);
+    border-radius: 50px;
+    font-size: 13px;
+    color: var(--mocha);
+    font-weight: 500;
+    transition: background .3s, transform .3s;
+  }
+  .value-pill:hover { background: rgba(200,149,122,.2); transform: scale(1.04); }
+
+  /* ── TESTIMONIALS ──────────────────────────────────── */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+  }
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px 28px;
+    border: 1px solid rgba(200,149,122,.15);
+    position: relative;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .testimonial-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(92,61,46,.1); }
+  .quote-mark {
+    font-family: var(--ff-serif);
+    font-size: 72px;
+    line-height: .7;
+    color: var(--rose);
+    opacity: .25;
+    margin-bottom: 12px;
+    font-weight: 300;
+  }
+  .testimonial-text {
+    font-size: 15px;
+    color: #5e4038;
+    line-height: 1.75;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .testimonial-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .testimonial-avatar {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blush), var(--rose));
+    display: flex; align-items:center; justify-content:center;
+    font-family: var(--ff-serif);
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .testimonial-name {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--mocha);
+  }
+  .testimonial-handle {
+    font-size: 12px;
+    color: #9a7a6e;
+  }
+  .stars {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  /* ── FINAL CTA ─────────────────────────────────────── */
+  .cta-final {
+    background: linear-gradient(145deg, var(--mocha) 0%, #3a2010 100%);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-final::before {
+    content:'';
+    position:absolute;
+    top: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse, rgba(201,169,110,.2), transparent 70%);
+    pointer-events:none;
+  }
+  .cta-final-content { position:relative; z-index:2; }
+  .cta-final-tag {
+    display: inline-block;
+    font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: var(--gold);
+    background: rgba(201,169,110,.12);
+    border: 1px solid rgba(201,169,110,.25);
+    border-radius: 50px;
+    padding: 6px 18px;
+    margin-bottom: 24px;
+  }
+  .cta-final-title {
+    font-family: var(--ff-serif);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .cta-final-title em { font-style: italic; color: var(--gold-lt); }
+  .cta-final-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,.65);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .cta-final-form {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto 18px;
+  }
+  .cta-final-form input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1.5px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    font-family: var(--ff-sans);
+    font-size: 15px;
+    color: var(--white);
+    outline: none;
+    backdrop-filter: blur(8px);
+    transition: border-color .25s, background .25s;
+  }
+  .cta-final-form input::placeholder { color: rgba(255,255,255,.4); }
+  .cta-final-form input:focus { border-color: rgba(200,149,122,.6); background: rgba(255,255,255,.12); }
+  .btn-gold {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--gold) 0%, #b8903e 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-family: var(--ff-sans);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+    white-space: nowrap;
+  }
+  .btn-gold:hover { transform: scale(1.04); box-shadow: 0 8px 28px rgba(201,169,110,.4); }
+  .cta-urgency {
+    font-size: 13px;
+    color: rgba(255,255,255,.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px;
+    background: #6fcf97;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+  }
+  .pulse-dot::after {
+    content:'';
+    position:absolute; inset:-3px;
+    border-radius:50%;
+    background: rgba(111,207,151,.4);
+    animation: pulse-ring 1.5s ease-out infinite;
+  }
+
+  /* ── FOOTER ─────────────────────────────────────────── */
+  footer {
+    background: var(--charcoal);
+    padding: 36px 0;
+    text-align: center;
+  }
+  footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,.3);
+    line-height: 1.7;
+  }
+  footer a { color: var(--rose); opacity: .8; }
+
+  /* ── STICKY NAV ─────────────────────────────────────── */
+  .sticky-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background .4s, box-shadow .4s;
+  }
+  .sticky-nav.scrolled {
+    background: rgba(250,247,244,.92);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(92,61,46,.08);
+  }
+  .nav-brand {
+    font-family: var(--ff-serif);
+    font-size: 22px;
+    color: var(--mocha);
+    font-style: italic;
+  }
+  .nav-cta {
+    padding: 10px 22px;
+    background: var(--rose);
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: transform .3s, box-shadow .3s;
+    border: none;
+    cursor: pointer;
+    font-family: var(--ff-sans);
+  }
+  .nav-cta:hover { transform: scale(1.04); box-shadow: 0 6px 18px rgba(168,114,96,.35); }
+
+  /* ── RESPONSIVE ─────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero { min-height: auto; padding: 100px 0 80px; text-align: center; }
+    .hero-sub { margin-left: auto; margin-right: auto; }
+    .free-badge { margin-left: auto; margin-right: auto; }
+    .hero-visual { order: -1; }
+    .mockup { width: 240px; height: 320px; }
+    .proof-chip { display: none; }
+    .benefits-grid { grid-template-columns: 1fr; gap: 20px; }
+    .guide-inner { grid-template-columns: 1fr; }
+    .guide-visual { display: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .about-photo { max-width: 280px; margin: 0 auto; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .cta-final-form { flex-direction: column; }
+    .section { padding: 64px 0; }
+  }
+  @media (max-width: 600px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" id="nav">
+  <span class="nav-brand">Hiba ✦</span>
+  <button class="nav-cta" onclick="document.getElementById('form-top').scrollIntoView({behavior:'smooth'})">
+    Get the Free Guide →
+  </button>
+</nav>
+
+<!-- ═══════════════════════════════════════════════ HERO -->
+<section class="hero" id="top">
+  <div class="hero-deco hero-deco-1"></div>
+  <div class="hero-deco hero-deco-2"></div>
+  <div class="hero-deco hero-deco-3"></div>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Copy -->
+      <div class="hero-content">
+        <div class="tag fade-up">Free Guide for Women in Business</div>
+        <h1 class="hero-headline fade-up delay-1">
+          Attract Dream Clients on Instagram —<br>
+          <em>Without Feeling Salesy.</em>
+        </h1>
+        <p class="hero-sub fade-up delay-2">
+          Download the free guide thousands of female entrepreneurs are using to turn their Instagram into a client-attraction engine — organically, authentically, and without spending a single dollar on ads.
+        </p>
+        <div class="free-badge fade-up delay-3">100% Free — Instant Download</div>
+      </div>
+
+      <!-- Form Card -->
+      <div class="hero-visual fade-up delay-2" id="form-top">
+        <div class="form-card">
+          <p class="form-card-title">Get Your Free Guide</p>
+          <p class="form-card-sub">Enter your details below and receive instant access.</p>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="e.g. Sarah Al-Rashid" autocomplete="name"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" autocomplete="email"/>
+          </div>
+          <button class="btn-primary" onclick="handleSignup()">
+            ✦ Send Me the Free Guide
+          </button>
+          <p class="form-privacy">No spam. Unsubscribe anytime. Your privacy is sacred.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ SOCIAL PROOF BAR -->
+<div style="background:var(--warm); border-top:1px solid rgba(200,149,122,.2); border-bottom:1px solid rgba(200,149,122,.2); padding:20px 0; overflow:hidden;">
+  <div class="container" style="display:flex; gap:48px; align-items:center; justify-content:center; flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px; font-size:14px; color:var(--mocha); font-weight:500;">
+      <span style="font-size:20px;">💌</span> 650+ Women Downloaded This Guide
+    </div>
+    <div style="display:flex;align-items:center;gap:10px; font-size:14px; color:var(--mocha); font-weight:500;">
+      <span style="font-size:20px;">⭐</span> 4.9/5 Average Rating
+    </div>
+    <div style="display:flex;align-items:center;gap:10px; font-size:14px; color:var(--mocha); font-weight:500;">
+      <span style="font-size:20px;">🔒</span> 100% Private & Secure
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ BENEFITS -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="tag">What You'll Discover</div>
+      <h2 class="section-title">Everything You Need to Turn<br><em style="font-style:italic;color:var(--rose)">Instagram Into Your #1 Client Source</em></h2>
+      <div class="divider"></div>
+      <p class="section-sub">No guesswork. No generic advice. Just clear, actionable strategies that actually work for service-based businesses.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">🎯</div>
+        <h3 class="benefit-title">Attract Aligned Clients Consistently</h3>
+        <p class="benefit-desc">Learn the exact profile and content tweaks that make your ideal clients stop scrolling and think "she's exactly who I've been looking for."</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">🤍</div>
+        <h3 class="benefit-title">Build Trust That Converts</h3>
+        <p class="benefit-desc">Discover the specific types of content that build deep trust with your audience — so they come to you ready to invest, not just watch.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">👑</div>
+        <h3 class="benefit-title">Become the Obvious Choice</h3>
+        <p class="benefit-desc">Position yourself so powerfully that when a follower needs your service, your name is the first — and only — one that comes to mind.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">🚫</div>
+        <h3 class="benefit-title">Avoid the Mistakes That Repel Clients</h3>
+        <p class="benefit-desc">The common Instagram habits that unknowingly signal "amateur" and push potential clients away — and how to fix them today.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">📲</div>
+        <h3 class="benefit-title">Simple Strategies That Generate Inquiries</h3>
+        <p class="benefit-desc">Practical Instagram actions you can implement this week that consistently move followers from passive observers to active inquiries.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">✨</div>
+        <h3 class="benefit-title">Sell Without Selling</h3>
+        <p class="benefit-desc">The art of making your audience want to work with you — without ever feeling pushy, desperate, or like you're constantly promoting yourself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ INSIDE THE GUIDE -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="tag">Inside the Guide</div>
+      <h2 class="section-title">7 Powerful Lessons<br><em style="font-style:italic;color:var(--rose)">Waiting for You Inside</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="guide-inner">
+      <div class="guide-lessons">
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">01</span>
+          <div class="lesson-content">
+            <p class="lesson-title">The Client Attraction Mindset Shift</p>
+            <p class="lesson-desc">Why most entrepreneurs approach Instagram backwards — and the single reframe that changes everything about how you show up.</p>
+          </div>
+        </div>
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">02</span>
+          <div class="lesson-content">
+            <p class="lesson-title">Optimizing Your Profile for First Impressions</p>
+            <p class="lesson-desc">How to turn your bio, photo, and highlights into a silent sales machine that works for you 24/7.</p>
+          </div>
+        </div>
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">03</span>
+          <div class="lesson-content">
+            <p class="lesson-title">The Content Formula That Builds Authority</p>
+            <p class="lesson-desc">The 3-pillar content system that balances value, connection, and visibility — so you attract AND nurture at the same time.</p>
+          </div>
+        </div>
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">04</span>
+          <div class="lesson-content">
+            <p class="lesson-title">Stories That Sell Without Selling</p>
+            <p class="lesson-desc">How to use Instagram Stories to create genuine desire for your services — while keeping it feeling real and effortless.</p>
+          </div>
+        </div>
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">05</span>
+          <div class="lesson-content">
+            <p class="lesson-title">Moving Followers Into Your DMs</p>
+            <p class="lesson-desc">Proven engagement prompts and conversation starters that turn silent followers into warm leads ready to talk.</p>
+          </div>
+        </div>
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">06</span>
+          <div class="lesson-content">
+            <p class="lesson-title">Consistency Without Burnout</p>
+            <p class="lesson-desc">A simple sustainable posting rhythm that keeps you visible and magnetic — without consuming your entire life.</p>
+          </div>
+        </div>
+        <div class="guide-lesson reveal">
+          <span class="lesson-num">07</span>
+          <div class="lesson-content">
+            <p class="lesson-title">Your 30-Day Action Plan</p>
+            <p class="lesson-desc">A clear, step-by-step roadmap to implement everything in this guide and start seeing real inquiry results within a month.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-visual reveal">
+        <div class="guide-preview">
+          <div class="guide-preview-pages">
+            <div class="page-thumb"></div>
+            <div class="page-thumb"></div>
+            <div class="page-thumb"></div>
+          </div>
+          <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Free Guide</p>
+          <h3 class="guide-preview-title">How to <em>Attract Clients</em> Naturally Through Instagram</h3>
+          <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,.6),transparent);margin:0 auto 16px;"></div>
+          <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;">7 Lessons · Instant Download<br>PDF Format · 100% Free</p>
+          <button class="guide-preview-cta" onclick="document.getElementById('form-top').scrollIntoView({behavior:'smooth'})">
+            Download Now — It's Free →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ ABOUT -->
+<section class="section">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo">✦</div>
+        <div class="about-photo-badge">
+          <div class="badge-num">5K+</div>
+          <div class="badge-label">Women Helped</div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <div class="tag">Your Guide</div>
+        <h2 class="about-name">Coach Hiba</h2>
+        <p class="about-role">Brand Strategist & Business Coach for Women</p>
+        <div class="divider"></div>
+        <p class="about-bio">
+          Hi, I'm Hiba — a business coach who helps women build profitable online brands and turn their knowledge into income they're proud of.
+        </p>
+        <p class="about-bio">
+          A few years ago, I was exactly where you might be right now: posting consistently, working hard, and wondering why Instagram wasn't converting into real clients. I tried the trending tactics. I followed all the "rules." Nothing clicked — until I stopped trying to market <em>at</em> people and started attracting <em>to</em> them.
+        </p>
+        <p class="about-bio">
+          That shift changed everything. Today, I've helped thousands of women — coaches, freelancers, service providers, and creators — build Instagram presences that feel authentic and attract aligned clients organically. This guide is the foundation of what I teach, and I want you to have it for free.
+        </p>
+        <div class="about-values">
+          <span class="value-pill">Authentic Marketing</span>
+          <span class="value-pill">Personal Branding</span>
+          <span class="value-pill">Organic Growth</span>
+          <span class="value-pill">Women in Business</span>
+          <span class="value-pill">Digital Products</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ TESTIMONIALS -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <div class="tag" style="margin:0 auto 20px;">What Women Are Saying</div>
+      <h2 class="section-title">Real Results from Real Women</h2>
+      <div class="divider" style="margin:24px auto;"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">I downloaded this guide on a Tuesday and by Friday I had two new inquiries in my DMs. I'd been posting for months with zero response — this completely changed how I approach my content. It's not magic, it's strategy. And it actually works.</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">L</div>
+          <div>
+            <p class="testimonial-name">Layla Mansour</p>
+            <p class="testimonial-handle">Life Coach · Dubai</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">I used to feel so uncomfortable "selling" on Instagram. After reading this guide, I realized I wasn't supposed to sell at all — I was supposed to attract. That single mindset shift transformed my whole relationship with social media. My engagement tripled in three weeks.</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #c8b4d4, #9a7ab8);">S</div>
+          <div>
+            <p class="testimonial-name">Sara Elamine</p>
+            <p class="testimonial-handle">Freelance Designer · London</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">Hiba has a gift for making things feel simple without dumbing them down. This guide felt like having coffee with a brilliant friend who just happened to know everything about Instagram strategy. I've recommended it to every woman in my network who has an online business.</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #b4c8d4, #7a9ab8);">N</div>
+          <div>
+            <p class="testimonial-name">Nour Khalil</p>
+            <p class="testimonial-handle">Online Business Owner · Amman</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ FINAL CTA -->
+<section class="cta-final">
+  <div class="container">
+    <div class="cta-final-content reveal">
+      <div class="cta-final-tag">✦ Limited Free Access</div>
+      <h2 class="cta-final-title">Your Dream Clients Are<br><em>Already on Instagram.</em><br>Let's Help Them Find You.</h2>
+      <p class="cta-final-sub">
+        Join 650+ women who've already discovered how to attract aligned clients naturally — no ads, no cold DMs, no awkward pitching. Just authentic strategy that works.
+      </p>
+      <div class="cta-final-form">
+        <input type="email" placeholder="Enter your email to get instant access" id="cta-email"/>
+        <button class="btn-gold" onclick="handleCTASignup()">Get It Free →</button>
+      </div>
+      <p class="cta-urgency">
+        <span class="pulse-dot"></span>
+        &nbsp; 47 women downloaded this guide in the last 24 hours
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Coach Hiba · All rights reserved</p>
+  <p style="margin-top:8px;">
+    <a href="#" style="margin:0 12px;">Privacy Policy</a>
+    <a href="#" style="margin:0 12px;">Terms of Use</a>
+    <a href="#" style="margin:0 12px;">Contact</a>
+  </p>
+  <p style="margin-top:16px; font-size:12px; opacity:.5;">
+    By downloading, you agree to receive occasional emails. Unsubscribe anytime.
+  </p>
+</footer>
+
+<!-- ═══════════════════════════════════════════════ SUCCESS MODAL -->
+<div id="modal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(44,36,32,.6); backdrop-filter:blur(8px); align-items:center; justify-content:center;">
+  <div style="background:var(--white); border-radius:28px; padding:52px 44px; max-width:440px; width:90%; text-align:center; box-shadow:0 40px 80px rgba(92,61,46,.2); position:relative; animation: fadeUp .5s ease both;">
+    <div style="font-size:52px; margin-bottom:20px;">🎉</div>
+    <h3 style="font-family:var(--ff-serif);font-size:32px;color:var(--mocha);margin-bottom:12px;">You're in, beautiful!</h3>
+    <p style="color:#7a5c4e;font-size:16px;line-height:1.7;margin-bottom:28px;">Your free guide is on its way to your inbox. Check your email in the next few minutes — and don't forget to check your spam if you don't see it!</p>
+    <button onclick="document.getElementById('modal').style.display='none'" style="padding:14px 32px;background:linear-gradient(135deg,var(--rose),var(--rose-dk));color:white;border:none;border-radius:50px;font-family:var(--ff-sans);font-size:15px;font-weight:500;cursor:pointer;">
+      ✦ Perfect, Thank You!
+    </button>
+  </div>
+</div>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Form handlers
+  function handleSignup() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!name || !email) { alert('Please fill in both fields to get your free guide!'); return; }
+    if (!/\S+@\S+\.\S+/.test(email)) { alert('Please enter a valid email address.'); return; }
+    showModal();
+  }
+  function handleCTASignup() {
+    const email = document.getElementById('cta-email').value.trim();
+    if (!email || !/\S+@\S+\.\S+/.test(email)) { alert('Please enter a valid email address.'); return; }
+    showModal();
+  }
+  function showModal() {
+    const m = document.getElementById('modal');
+    m.style.display = 'flex';
+  }
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) this.style.display = 'none';
+  });
+</script>
+</body>
+</html>
