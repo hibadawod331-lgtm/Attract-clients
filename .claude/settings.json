@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "majed-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "majedphotos/majed-plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "majed-video@majed-plugins": true
+  }
+}
