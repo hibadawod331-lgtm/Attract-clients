@@ -28,3 +28,11 @@ Lessons:
 - Instagram: real photos of Hiba (neutral/olive/cream outfits, bright homes, travel), white bold Arabic text.
 - Website palette: cream #FAF7F4, blush #E8D5C4, rose #C8957A, mocha #5C3D2E, charcoal #2C2420, gold #C9A96E.
 - Fonts: Arabic headline font TBD (Cairo / Tajawal / IBM Plex Sans Arabic); Latin: Cormorant Garamond + DM Sans.
+
+## Carousel template (approved style)
+- 1080x1350, each slide = two stacked photos of Hiba, white divider line.
+- One short line per photo, white Tajawal 800 at 70px, heavy dark shadow, centered. Text never on the face.
+- One red-orange (#FF4A2E) accent phrase per slide. No brand bar, no counters (Instagram shows its own).
+- Render: `node tools/render.js <carousel-folder>`. Source template: carousels/01-expertise-no-clients/carousel.html
+- Offer: 6-week paid program with private 1:1 coaching. CTA keyword: «برنامج».
+- Best posting time: Sun–Tue 18:00–21:00 CET.
