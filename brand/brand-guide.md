@@ -30,7 +30,7 @@ Lessons:
 
 ## Carousel template (approved style)
 - 1080x1350, each slide = two stacked photos of Hiba, white divider line.
-- One short line per photo, white Tajawal 800 at 70px, heavy dark shadow, centered. Text never on the face.
+- Fonts (chosen: option B): titles = El Messiri 700 (~92px); body = IBM Plex Sans Arabic 500 (~60px). White, heavy dark shadow, centered. Text never on the face.
 - One red-orange (#FF4A2E) accent phrase per slide. No brand bar, no counters (Instagram shows its own).
 - Render: `node tools/render.js <carousel-folder>`. Source template: carousels/01-expertise-no-clients/carousel.html
 - Offer: 6-week paid program with private 1:1 coaching. CTA keyword: «برنامج».
