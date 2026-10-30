@@ -1,22 +1,23 @@
 # AI images for carousel 02 ($0 / $5K / $10K)
 
-Generate **3 images once** and reuse them on every slide (like the reference).
-Tool: Nano Banana (Gemini / fal-ai/nano-banana/edit). Attach 3–5 reference photos of Hiba + the character sheet with each prompt.
-Output: 3:4 portrait, then save as `photos/tier0.png`, `photos/tier5k.png`, `photos/tier10k.png`.
+Generate **3 images** (one per tier), reuse them on every slide.
+Tool: Gemini (Nano Banana) or fal-ai/nano-banana/edit.
+**Attach Hiba's character sheet image to every prompt.**
+Output: portrait 3:4, pure white background. Send them back named tier0 / tier5k / tier10k.
 
 ## Shared block (paste at the start of every prompt)
-> Use the woman in the reference photos. Keep her face, features, skin tone, hair (long soft waves, dark-brown roots with honey-blonde balayage) and makeup exactly the same — do not change her identity. Full-body studio photo, seated on a modern beige wooden chair, facing the camera, pure seamless white background (#FFFFFF), soft even studio lighting, no shadows on the background, sharp focus, photorealistic, 3:4 portrait, entire body visible including shoes, centered with empty space above her head. No text, no logos.
+> Use the exact woman from the attached character sheet. Keep her face, eyes, brows, nose, lips, skin tone, makeup and hair (long dark-brown waves with caramel balayage, middle part) 100% identical — same person, do not beautify or change her identity. Full-body photo, she is seated on a simple light-wood chair with thin black metal legs, facing the camera, pure seamless white background, soft even studio light, no background shadows, photorealistic, sharp, 3:4 portrait, her whole body including shoes in frame, empty space above her head. No text, no logos.
 
-## Image 1 — $0 /month (dusty rose)
-> [shared block] She wears a relaxed oversized dusty-rose (#C0607A) knit sweater with matching wide-leg trousers and white sneakers. Pose: slightly slouched, one hand resting under her chin, thinking, a small uncertain smile.
+## Image 1 — tier0 ($0 / month) — dusty rose
+> [shared block] Outfit: soft dusty-rose (#C0607A) oversized knit sweater, matching dusty-rose wide-leg trousers, white sneakers. Pose: slightly leaning forward, elbow on knee, chin resting on her hand, thinking, small unsure smile.
 
-## Image 2 — $5,000 /month (camel)
-> [shared block] She wears a tailored camel (#B8863B) blazer over a cream top with matching wide-leg trousers and nude pointed heels, thin gold bracelets. Pose: sitting upright, both hands resting on her knees, warm confident smile.
+## Image 2 — tier5k ($5,000 / month) — camel
+> [shared block] Outfit: tailored camel (#B8863B) blazer over a cream top, matching camel wide-leg trousers, nude pointed heels, thin gold bracelets. Pose: sitting upright, both hands resting on her knees, warm confident smile.
 
-## Image 3 — $10,000 /month (chocolate brown)
-> [shared block] She wears a sharp chocolate-brown (#5C3D2E) power suit (structured blazer + wide-leg trousers), black pointed heels, gold bangles and a fine gold necklace. Pose: sitting tall, legs crossed, hands clasped on her knee, calm self-assured smile, chin slightly raised.
+## Image 3 — tier10k ($10,000 / month) — her signature suit
+> [shared block] Outfit: exactly the black suit from the character sheet — fitted black blazer with the large cream lace-trim collar and cream neck bow, black wide-leg trousers, black pointed heels, gold bangles. Pose: sitting tall, legs crossed, hands clasped on her knee, chin slightly raised, calm self-assured smile.
 
-## Check before using
-- Same face in all three (compare eyes, nose, lips side by side).
-- Background is pure white, whole body including shoes is in frame.
-- Hands have 5 fingers; jewelry looks real.
+## Check before sending back
+- Same face in all 3 (put them side by side).
+- Same chair, same camera distance, same lighting in all 3.
+- Whole body + shoes visible, white background, hands with 5 fingers.
