@@ -33,5 +33,5 @@ Lessons:
 - Fonts (chosen: option B): titles = El Messiri 700 (~92px); body = IBM Plex Sans Arabic 500 (~60px). White, heavy dark shadow, centered. Text never on the face.
 - One red-orange (#FF4A2E) accent phrase per slide. No brand bar, no counters (Instagram shows its own).
 - Render: `node tools/render.js <carousel-folder>`. Source template: carousels/01-expertise-no-clients/carousel.html
-- Offer: 6-week paid program with private 1:1 coaching. CTA keyword: «برنامج».
+- Offer: 6-week paid program with private 1:1 coaching. CTA keyword: «براند» (اذا بدّك تعرفي كيف تحوّلي خبرتك لدخل وتكبّري بزنسك، علّقي براند).
 - Best posting time: Sun–Tue 18:00–21:00 CET.
