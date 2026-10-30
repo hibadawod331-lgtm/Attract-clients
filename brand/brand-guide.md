@@ -8,8 +8,7 @@ Offer funnel: comment keyword (e.g. "ماستركلاس") → free masterclass �
 - Age: 25–34 = 44% · 18–24 = 34% · 35–44 = 14%
 - Countries: Algeria 22% · Egypt 16% · Morocco 13% · Iraq 11% · Syria 5%
 - Languages: Arabic 73% · French 18% · English 6%
-- => Write in simple, "white" Arabic that Maghreb, Egypt and Iraq all understand. Avoid heavy Levantine slang.
-  Addressed to women (feminine verbs: تبيعي، علّقي، احفظي).
+- => Dialect: Syrian (شامي) or white Arabic. Feminine address (تبيعي، علّقي، احفظي).
 
 ## What performs (top posts)
 | Hook (cover) | Reach | Likes | Comments | Shares |
