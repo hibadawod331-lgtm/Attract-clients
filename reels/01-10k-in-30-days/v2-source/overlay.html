@@ -1,13 +1,13 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><style>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><style>@font-face{font-family:A;font-weight:700;src:url(amiri-arabic-700.woff2)}@font-face{font-family:A;font-weight:700;src:url(amiri-latin-700.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:R;font-weight:700;src:url(aref-ruqaa-arabic-700.woff2)}@font-face{font-family:R;font-weight:700;src:url(aref-ruqaa-latin-700.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:P;font-weight:400;src:url(ibm-plex-sans-arabic-arabic-400.woff2)}@font-face{font-family:P;font-weight:400;src:url(ibm-plex-sans-arabic-latin-400.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:P;font-weight:600;src:url(ibm-plex-sans-arabic-arabic-600.woff2)}@font-face{font-family:P;font-weight:600;src:url(ibm-plex-sans-arabic-latin-600.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-arabic-700.woff2)}@font-face{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}
 *{margin:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;background:transparent;overflow:hidden}
-#big{position:absolute;left:0;right:0;top:165px;text-align:center;font-family:R;font-weight:700;font-size:200px;line-height:1.05;
+#big{position:absolute;left:0;right:0;top:175px;text-align:center;font-family:A;font-weight:700;font-size:200px;line-height:1.05;
   background:linear-gradient(100deg,#F7D2C2 0%,#EEC0D8 45%,#C7B8F6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 0 34px rgba(235,190,225,.45));white-space:nowrap}
+  filter:drop-shadow(0 0 34px rgba(235,190,225,.45));white-space:nowrap;padding:0 50px}
 #big.small2{font-size:160px}
 #small{position:absolute;left:0;right:0;top:178px;text-align:center;font-family:P;font-weight:400;font-size:54px;color:rgba(255,255,255,.92);
   text-shadow:0 2px 18px rgba(0,0,0,.55)}
@@ -32,7 +32,7 @@ function render(t){
   const big=document.getElementById('big'), sm=document.getElementById('small'), cap=document.getElementById('cap');
   let k=TL.K.find(x=>t>=x[0]&&t<x[1]);
   if(k){const p=ease((t-k[0])/0.45), out=Math.min(1,(k[1]-t)/0.25);
-    big.textContent=k[3]; big.className=k[3].length>8?'small2':'';
+    if(big.dataset.t!==k[3]){big.dataset.t=k[3];big.textContent=k[3];big.style.whiteSpace='nowrap';big.style.lineHeight='1.05';let fs=170;big.style.fontSize=fs+'px';while(big.scrollWidth>1080&&fs>100){fs-=6;big.style.fontSize=fs+'px';}if(big.scrollWidth>1080){big.style.whiteSpace='normal';big.style.lineHeight='1.0';fs=130;big.style.fontSize=fs+'px';while(big.scrollHeight>300&&fs>90){fs-=6;big.style.fontSize=fs+'px';}}}
     big.style.opacity=Math.min(p,out); big.style.transform=`translateY(${(1-p)*40}px) scale(${1.12-0.12*p})`;
     big.style.filter=`blur(${(1-p)*14}px) drop-shadow(0 0 34px rgba(235,190,225,.45))`;
     const q=ease((t-k[0]-0.15)/0.4);
