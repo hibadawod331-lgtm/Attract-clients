@@ -1,0 +1,224 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,IBM Plex Sans Arabic,88,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,5,3,2,60,60,945,1
+Style: Lab,IBM Plex Sans Arabic,46,&H007AC2E8,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,3,2,8,60,60,175,1
+Style: Ttl,El Messiri,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,4,3,8,60,60,240,1
+Style: Hdl,IBM Plex Sans Arabic,30,&H40FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,2,1,4,50,50,0,1
+Style: End,El Messiri,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1
+Style: Box,IBM Plex Sans Arabic,10,&H50000000,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:00.57,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لو معي
+Dialogue: 2,0:00:00.57,0:00:01.05,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مهارة
+Dialogue: 2,0:00:01.05,0:00:01.46,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}وحدة
+Dialogue: 2,0:00:01.46,0:00:01.78,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}و30
+Dialogue: 2,0:00:01.78,0:00:02.11,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يوم
+Dialogue: 2,0:00:02.11,0:00:02.84,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بس وهدفي
+Dialogue: 2,0:00:02.84,0:00:03.32,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}حولها
+Dialogue: 2,0:00:03.32,0:00:03.81,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لبزنس
+Dialogue: 2,0:00:03.81,0:00:04.38,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يجيبلي
+Dialogue: 2,0:00:04.38,0:00:05.03,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}10 آلاف
+Dialogue: 2,0:00:05.03,0:00:05.51,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}دولار
+Dialogue: 2,0:00:05.51,0:00:06.08,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بالشهر
+Dialogue: 2,0:00:06.08,0:00:06.32,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}هاد
+Dialogue: 2,0:00:06.32,0:00:06.86,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بالضبط
+Dialogue: 2,0:00:06.86,0:00:07.10,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي رح
+Dialogue: 2,0:00:07.10,0:00:07.52,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ركز
+Dialogue: 2,0:00:07.52,0:00:07.72,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}عليه
+Dialogue: 2,0:00:07.72,0:00:08.22,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}من اليوم
+Dialogue: 2,0:00:08.22,0:00:08.58,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}الأول
+Dialogue: 2,0:00:08.58,0:00:08.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لليوم
+Dialogue: 2,0:00:08.92,0:00:09.46,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}التالت
+Dialogue: 2,0:00:09.46,0:00:10.28,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}رح حدد
+Dialogue: 2,0:00:10.28,0:00:11.00,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}شو الشي
+Dialogue: 2,0:00:11.00,0:00:11.42,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي أنا
+Dialogue: 2,0:00:11.42,0:00:11.94,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فعلا
+Dialogue: 2,0:00:11.94,0:00:12.52,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}شاطرة
+Dialogue: 2,0:00:12.52,0:00:12.94,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فيه
+Dialogue: 2,0:00:12.94,0:00:13.22,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مو بس
+Dialogue: 2,0:00:13.22,0:00:13.52,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}شو بحب
+Dialogue: 2,0:00:13.52,0:00:14.12,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أعمل
+Dialogue: 2,0:00:14.12,0:00:14.62,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}شو الشي
+Dialogue: 2,0:00:14.62,0:00:15.32,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي فعلا
+Dialogue: 2,0:00:15.32,0:00:15.62,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فيني
+Dialogue: 2,0:00:15.62,0:00:15.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ساعد
+Dialogue: 2,0:00:15.98,0:00:16.48,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}حدا
+Dialogue: 2,0:00:16.48,0:00:16.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يصير
+Dialogue: 2,0:00:16.98,0:00:17.46,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أحسن
+Dialogue: 2,0:00:17.46,0:00:17.72,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فيه
+Dialogue: 2,0:00:17.72,0:00:18.45,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}من اليوم
+Dialogue: 2,0:00:18.45,0:00:19.02,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}الرابع
+Dialogue: 2,0:00:19.02,0:00:19.50,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لليوم
+Dialogue: 2,0:00:19.50,0:00:20.07,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}السابع
+Dialogue: 2,0:00:20.07,0:00:20.64,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}رح دور
+Dialogue: 2,0:00:20.64,0:00:21.45,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على الشخص
+Dialogue: 2,0:00:21.45,0:00:22.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي عنده
+Dialogue: 2,0:00:22.26,0:00:22.74,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مشكلة
+Dialogue: 2,0:00:22.74,0:00:23.23,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}واضحة
+Dialogue: 2,0:00:23.23,0:00:23.96,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بهالمجال
+Dialogue: 2,0:00:23.96,0:00:24.28,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لأنه
+Dialogue: 2,0:00:24.28,0:00:25.02,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بالنهاية
+Dialogue: 2,0:00:25.02,0:00:25.48,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ما بدي
+Dialogue: 2,0:00:25.48,0:00:25.96,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}إني ابني
+Dialogue: 2,0:00:25.96,0:00:26.70,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}عرضي
+Dialogue: 2,0:00:26.70,0:00:27.20,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على الشي
+Dialogue: 2,0:00:27.20,0:00:27.56,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي بس
+Dialogue: 2,0:00:27.56,0:00:28.42,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أنا بعرفه
+Dialogue: 2,0:00:28.42,0:00:28.78,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بدي
+Dialogue: 2,0:00:28.78,0:00:30.04,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ابنيه
+Dialogue: 2,0:00:30.04,0:00:30.66,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على المشكلة
+Dialogue: 2,0:00:30.66,0:00:31.06,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي الناس
+Dialogue: 2,0:00:31.06,0:00:31.58,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مستعدة
+Dialogue: 2,0:00:31.58,0:00:32.08,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تدفع
+Dialogue: 2,0:00:32.08,0:00:32.60,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لتخلص
+Dialogue: 2,0:00:32.60,0:00:32.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}منها
+Dialogue: 2,0:00:32.92,0:00:33.30,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}من اليوم
+Dialogue: 2,0:00:33.30,0:00:33.80,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}التامن
+Dialogue: 2,0:00:33.80,0:00:34.64,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}للعاشر
+Dialogue: 2,0:00:34.64,0:00:35.24,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}رح حول
+Dialogue: 2,0:00:35.24,0:00:35.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}هالمشكلة
+Dialogue: 2,0:00:35.98,0:00:36.60,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لنتيجة
+Dialogue: 2,0:00:36.60,0:00:37.28,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}واضحة
+Dialogue: 2,0:00:37.28,0:00:37.42,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يعني
+Dialogue: 2,0:00:37.42,0:00:37.78,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ما رح
+Dialogue: 2,0:00:37.78,0:00:38.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}قول
+Dialogue: 2,0:00:38.26,0:00:39.10,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أنا بعلمك
+Dialogue: 2,0:00:39.10,0:00:39.22,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}كيف
+Dialogue: 2,0:00:39.22,0:00:39.60,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تعملي
+Dialogue: 2,0:00:39.60,0:00:39.96,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}سوشيال
+Dialogue: 2,0:00:39.96,0:00:40.44,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ميديا
+Dialogue: 2,0:00:40.44,0:00:41.54,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لأ بقول
+Dialogue: 2,0:00:41.54,0:00:42.54,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أنا بساعدك
+Dialogue: 2,0:00:42.54,0:00:42.94,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تحولي
+Dialogue: 2,0:00:42.94,0:00:43.44,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}صفحتك
+Dialogue: 2,0:00:43.44,0:00:44.46,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على الإنستغرام
+Dialogue: 2,0:00:44.46,0:00:45.02,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لمصدر
+Dialogue: 2,0:00:45.02,0:00:45.40,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}دخل
+Dialogue: 2,0:00:45.40,0:00:46.05,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مستمر
+Dialogue: 2,0:00:46.80,0:00:47.80,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ويحولك
+Dialogue: 2,0:00:47.80,0:00:48.80,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}المتابعين
+Dialogue: 2,0:00:48.80,0:00:49.48,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لعملاء
+Dialogue: 2,0:00:49.48,0:00:50.06,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}من اليوم
+Dialogue: 2,0:00:50.06,0:00:51.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}11 لليوم
+Dialogue: 2,0:00:51.26,0:00:52.90,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}13 اختبري
+Dialogue: 2,0:00:52.90,0:00:53.78,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فكرتك
+Dialogue: 2,0:00:53.78,0:00:54.28,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}قبل
+Dialogue: 2,0:00:54.28,0:00:55.30,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ما تعرضيها
+Dialogue: 2,0:00:55.30,0:00:55.94,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على السوق
+Dialogue: 2,0:00:55.94,0:00:56.35,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بدنا
+Dialogue: 2,0:00:56.35,0:00:56.85,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}نتأكد
+Dialogue: 2,0:00:56.85,0:00:57.85,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}إذا الجمهور
+Dialogue: 2,0:00:57.85,0:00:58.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فعلا
+Dialogue: 2,0:00:58.26,0:00:58.60,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بدو
+Dialogue: 2,0:00:58.60,0:00:59.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}النتيجة
+Dialogue: 2,0:00:59.26,0:00:59.84,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ومستعد
+Dialogue: 2,0:00:59.84,0:01:00.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يدفع
+Dialogue: 2,0:01:00.26,0:01:00.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}كرمالها
+Dialogue: 2,0:01:00.92,0:01:01.54,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}من اليوم
+Dialogue: 2,0:01:01.54,0:01:02.54,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}14 لليوم
+Dialogue: 2,0:01:02.54,0:01:03.74,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}20 رح
+Dialogue: 2,0:01:03.74,0:01:04.14,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ابني
+Dialogue: 2,0:01:04.14,0:01:04.48,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}العرض
+Dialogue: 2,0:01:04.48,0:01:05.46,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}حوالين
+Dialogue: 2,0:01:05.46,0:01:06.28,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}النتيجة
+Dialogue: 2,0:01:06.28,0:01:06.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}وسعر
+Dialogue: 2,0:01:06.92,0:01:07.38,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}العرض
+Dialogue: 2,0:01:07.38,0:01:07.94,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي ما
+Dialogue: 2,0:01:07.94,0:01:09.06,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}رح حدده
+Dialogue: 2,0:01:09.06,0:01:09.62,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على عدد
+Dialogue: 2,0:01:09.62,0:01:10.10,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}الساعات
+Dialogue: 2,0:01:10.10,0:01:10.36,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي رح
+Dialogue: 2,0:01:10.36,0:01:10.80,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}قضيها
+Dialogue: 2,0:01:10.80,0:01:11.58,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مع العميل
+Dialogue: 2,0:01:11.58,0:01:12.05,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بل رح
+Dialogue: 2,0:01:12.05,0:01:12.44,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}حدده
+Dialogue: 2,0:01:12.44,0:01:13.15,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}على قيمة
+Dialogue: 2,0:01:13.15,0:01:13.77,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}النتيجة
+Dialogue: 2,0:01:13.77,0:01:14.40,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي عم
+Dialogue: 2,0:01:14.40,0:01:14.87,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ساعده
+Dialogue: 2,0:01:14.87,0:01:15.42,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يوصلها
+Dialogue: 2,0:01:15.42,0:01:15.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}من اليوم
+Dialogue: 2,0:01:15.98,0:01:16.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}21 لليوم
+Dialogue: 2,0:01:16.98,0:01:17.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}30 رح
+Dialogue: 2,0:01:17.98,0:01:18.56,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بلش
+Dialogue: 2,0:01:18.56,0:01:19.16,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بالبيع
+Dialogue: 2,0:01:19.16,0:01:19.70,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}رح بلش
+Dialogue: 2,0:01:19.70,0:01:19.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أعمل
+Dialogue: 2,0:01:19.98,0:01:20.50,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}محتوى
+Dialogue: 2,0:01:20.50,0:01:21.44,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}عن المشكلة
+Dialogue: 2,0:01:21.44,0:01:21.86,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}رح احكي
+Dialogue: 2,0:01:21.86,0:01:22.40,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مع الناس
+Dialogue: 2,0:01:22.40,0:01:22.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اللي عندهم
+Dialogue: 2,0:01:22.98,0:01:23.94,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}هالمشكلة
+Dialogue: 2,0:01:23.94,0:01:24.47,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}واسمع
+Dialogue: 2,0:01:24.47,0:01:25.45,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}اعتراضاتهم
+Dialogue: 2,0:01:25.45,0:01:25.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}وببلش
+Dialogue: 2,0:01:25.98,0:01:26.34,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}طور
+Dialogue: 2,0:01:26.34,0:01:26.96,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بالعرض
+Dialogue: 2,0:01:26.96,0:01:27.40,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تبعي
+Dialogue: 2,0:01:27.40,0:01:27.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بس أعرف
+Dialogue: 2,0:01:27.92,0:01:28.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فعلا
+Dialogue: 2,0:01:28.26,0:01:28.70,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}إذا بدهم
+Dialogue: 2,0:01:28.70,0:01:29.34,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يشتروا
+Dialogue: 2,0:01:29.34,0:01:29.68,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لأنه
+Dialogue: 2,0:01:29.68,0:01:29.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أكبر
+Dialogue: 2,0:01:29.92,0:01:30.26,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}غلطة
+Dialogue: 2,0:01:30.26,0:01:30.46,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ممكن
+Dialogue: 2,0:01:30.46,0:01:31.34,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تعمليها
+Dialogue: 2,0:01:31.34,0:01:31.66,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}إنك
+Dialogue: 2,0:01:31.66,0:01:32.00,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تقضي
+Dialogue: 2,0:01:32.00,0:01:32.58,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}6 شهور
+Dialogue: 2,0:01:32.58,0:01:32.92,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تبني
+Dialogue: 2,0:01:32.92,0:01:33.62,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}شي وبعدين
+Dialogue: 2,0:01:33.62,0:01:34.02,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تكتشفي
+Dialogue: 2,0:01:34.02,0:01:34.42,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}إنه
+Dialogue: 2,0:01:34.42,0:01:34.62,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}ما حدا
+Dialogue: 2,0:01:34.62,0:01:34.86,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بدو
+Dialogue: 2,0:01:34.86,0:01:35.34,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}يشتري
+Dialogue: 2,0:01:35.34,0:01:35.70,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بدك
+Dialogue: 2,0:01:35.70,0:01:36.24,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مهارة
+Dialogue: 2,0:01:36.24,0:01:36.79,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}مشكلة
+Dialogue: 2,0:01:36.79,0:01:37.33,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}واضحة
+Dialogue: 2,0:01:37.33,0:01:37.87,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}نتيجة
+Dialogue: 2,0:01:37.87,0:01:38.41,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}الناس
+Dialogue: 2,0:01:38.41,0:01:38.86,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فعلا
+Dialogue: 2,0:01:38.86,0:01:39.41,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بترغب
+Dialogue: 2,0:01:39.41,0:01:39.86,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}فيها
+Dialogue: 2,0:01:39.86,0:01:40.22,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}عرض
+Dialogue: 2,0:01:40.22,0:01:40.58,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}قوي
+Dialogue: 2,0:01:40.58,0:01:41.12,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}الناس
+Dialogue: 2,0:01:41.12,0:01:41.76,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بسعادة
+Dialogue: 2,0:01:41.76,0:01:42.21,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}تدفع
+Dialogue: 2,0:01:42.21,0:01:42.84,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}كرماله
+Dialogue: 2,0:01:42.84,0:01:43.32,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}وهيك
+Dialogue: 2,0:01:43.32,0:01:43.98,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}بتحولي
+Dialogue: 2,0:01:43.98,0:01:44.60,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}أي مهارة
+Dialogue: 2,0:01:44.60,0:01:45.12,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}عندك
+Dialogue: 2,0:01:45.12,0:01:45.66,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}لبزنس
+Dialogue: 2,0:01:45.66,0:01:45.84,Cap,,0,0,0,,{\fscx80\fscy80\t(0,90,\fscx100\fscy100)}حقيقي
+Dialogue: 1,0:00:00.00,0:00:07.62,Lab,,0,0,0,,{\fad(250,150)}مهارة وحدة · 30 يوم
+Dialogue: 1,0:00:00.00,0:00:07.62,Ttl,,0,0,0,,{\fad(250,150)}كيف بحولها لبزنس 10,000$ بالشهر؟
+Dialogue: 1,0:00:07.62,0:00:17.62,Lab,,0,0,0,,{\fad(250,150)}اليوم 1 – 3
+Dialogue: 1,0:00:07.62,0:00:17.62,Ttl,,0,0,0,,{\fad(250,150)}اكتشفي مهارتك
+Dialogue: 1,0:00:17.62,0:00:32.82,Lab,,0,0,0,,{\fad(250,150)}اليوم 4 – 7
+Dialogue: 1,0:00:17.62,0:00:32.82,Ttl,,0,0,0,,{\fad(250,150)}لاقي الشخص اللي عنده المشكلة
+Dialogue: 1,0:00:32.82,0:00:49.38,Lab,,0,0,0,,{\fad(250,150)}اليوم 8 – 10
+Dialogue: 1,0:00:32.82,0:00:49.38,Ttl,,0,0,0,,{\fad(250,150)}حولي المشكلة لنتيجة واضحة
+Dialogue: 1,0:00:49.38,0:01:00.82,Lab,,0,0,0,,{\fad(250,150)}اليوم 11 – 13
+Dialogue: 1,0:00:49.38,0:01:00.82,Ttl,,0,0,0,,{\fad(250,150)}اختبري فكرتك
+Dialogue: 1,0:01:00.82,0:01:15.32,Lab,,0,0,0,,{\fad(250,150)}اليوم 14 – 20
+Dialogue: 1,0:01:00.82,0:01:15.32,Ttl,,0,0,0,,{\fad(250,150)}ابني العرض
+Dialogue: 1,0:01:15.32,0:01:35.24,Lab,,0,0,0,,{\fad(250,150)}اليوم 21 – 30
+Dialogue: 1,0:01:15.32,0:01:35.24,Ttl,,0,0,0,,{\fad(250,150)}ابلشي بالبيع
+Dialogue: 1,0:01:35.24,0:01:45.84,Lab,,0,0,0,,{\fad(250,150)}المعادلة
+Dialogue: 1,0:01:35.24,0:01:45.84,Ttl,,0,0,0,,{\fad(250,150)}مهارة + مشكلة + نتيجة + عرض
+Dialogue: 0,0:00:00.00,0:01:45.89,Hdl,,0,0,0,,{\pos(50,1000)}@itscoachhiba
+Dialogue: 3,0:01:45.89,0:01:47.69,Box,,0,0,0,,{\fad(300,0)\p1}m 0 0 l 1080 0 1080 1920 0 1920{\p0}
+Dialogue: 4,0:01:46.04,0:01:47.69,End,,0,0,0,,{\fad(300,0)}@itscoachhiba
