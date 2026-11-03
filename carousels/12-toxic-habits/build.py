@@ -9,19 +9,19 @@ P=[("1. تكوني مهووسة إنك تكوني الخيار الأول",
     "يعني ستوكينغ… بس بشكل احترافي 🕵️‍♀️"),
    ("3. تبطلي تحاولي تعجبي الكل",
     "تبطلي تخففي من آرائك أو تغيري طريقة كلامك خوفاً من إنك تزعلي حدا.<br>مو هدفك الكل يحبك<br>هدفك تكوني مميزة وما تنساكي الناس الصح.",
-    "حتى البيتزا في ناس ما بتحبها… وعايشة عادي 🍕"),
+    ""),
    ("4. تصيري تعيدي نفس الكلام لدرجة تزهقي من حالك",
     "تحكي عن نفس رسالتك ونفس أفكارك بمية طريقة مختلفة لدرجة إنو الناس يصيروا يربطوا اسمك فيها.<br>لا تغيري تخصصك أو رسالتك بس لأنك إنتِ مليتي من تكرارها بينما الناس لسه عم تتعرف عليكي.",
-    "إذا إنتي زهقتي… معناها الناس هلأ بلشت تحفظ 😂"),
+    "إذا إنتي زهقتي… معناها الناس هلأ بلشت تحفظ اسمك 😂"),
    ("5. تصيري صارمة جداً بشو بتعطي وقتك واهتمامك",
     "تبطلي تعتبري كل فرصة فرصة لازم تستغليها.<br>إذا الشي ما عم يقوي اسمك أو يطور خبرتك أو يكبر جمهورك أو يزيد دخلك اسألي حالك:<br>ليش عم أعطيه من وقتي؟",
-    "مو كل عزيمة عالقهوة اجتماع بزنس ☕")]
+    "")]
 foot='<div class="foot"><img src="photos/avatar.png"><div><b>Itscoachhiba</b><span>@itscoachhiba</span></div></div>'
 arrow='<svg class="swipe" viewBox="0 0 120 60"><path d="M100 30 H18 M40 10 L18 30 L40 50" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 s='<section class="slide cover"><i></i><div class="hook"><p class="w">10 تصرفات توكسيك</p><p class="o">لتصيري الاسم الأول بمجالك</p></div></section>'
 for t,b,j in P:
     n,rest=t.split(". ",1)
-    s+=f'<section class="slide txt"><div class="body"><h2><bdi dir="ltr">{n}.</bdi>&nbsp;{rest}</h2><p class="q">{b}</p><p class="j">{j}</p></div>{foot}{arrow}</section>'
+    s+=f'<section class="slide txt"><div class="body"><h2><bdi dir="ltr">{n}.</bdi>&nbsp;{rest}</h2><p class="q">{b}</p>{f'<p class="j">{j}</p>' if j else ''}</div>{foot}{arrow}</section>'
 s+=f'<section class="slide txt"><div class="body"><h2>وتذكري</h2><p class="q">ما بتصيري الاسم الأول بمجالك لأنك عم تحاولي تبهري الكل.</p><p class="q">بتصيري الاسم الأول لما تكوني واضحة جداً مين إنتِ وشو بيميزك وشو القيمة اللي بتقدميها<br>لدرجة إنو الشخص الصح ما عاد يفكر يروح لحدا غيرك.</p></div>{foot}{arrow}</section>'
 s+=f'<section class="slide txt"><div class="body"><p class="q">إذا عم تعاني إنك تجذبي الانتباه على السوشيال ميديا وتحولي هالانتباه لمبيعات</p><h2 class="cta">ابعتيلي كلمة</h2><p class="kw" dir="ltr">BRAND</p><p class="q">بالخاص وبساعدك تكبري حسابك وتبيعي من خلال السوشيال ميديا</p></div>{foot}</section>'
 css=f'''@font-face{{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-700.woff2)}}@font-face{{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}}
