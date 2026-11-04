@@ -1,7 +1,7 @@
 import json, sys, os, subprocess, numpy as np
 from PIL import Image, ImageFilter
 from rembg import remove, new_session
-tl=json.load(open("timeline.json")); FPS=30; W,H=1080,1920; SRC="../cut2.mp4"
+tl=json.load(open("timeline.json")); FPS=30; W,H=1080,1920; SRC="../cut3.mp4"
 N=int(round(tl["dur"]*FPS)); secst=[s[0] for s in tl["sec"]]; segst=tl["segst"]
 def target(t):
     if any(a<=t<a+1.2 for a in secst): return 1.13
