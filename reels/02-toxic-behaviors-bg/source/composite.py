@@ -13,7 +13,7 @@ def zoom(img,zz):
     cw,ch=W/zz,H/zz; cx,cy=W*0.5,H*0.33
     x0=min(max(cx-cw/2,0),W-cw); y0=min(max(cy-ch/2,0),H-ch)
     return img.resize((W,H),Image.BICUBIC,box=(x0,y0,x0+cw,y0+ch))
-sess=new_session("isnet-general-use")
+os.makedirs("masks",exist_ok=True); sess=new_session("isnet-general-use")
 def run(f0,f1,out):
     dec=subprocess.Popen(["ffmpeg","-v","error","-ss",str(f0/FPS),"-i",SRC,"-frames:v",str(f1-f0),"-f","rawvideo","-pix_fmt","rgb24","-"],stdout=subprocess.PIPE)
     enc=subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{W}x{H}","-r",str(FPS),"-i","-","-c:v","libx264","-preset","medium","-crf","18","-pix_fmt","yuv420p",out],stdin=subprocess.PIPE) if out.endswith(".mp4") else None
@@ -22,7 +22,10 @@ def run(f0,f1,out):
         if len(raw)<W*H*3: break
         base=zoom(Image.frombytes("RGB",(W,H),raw),z[f]); name=f"{f:05d}.png"; img=base.convert("RGBA")
         if os.path.exists("back/"+name):
-            m=remove(base.resize((432,768)),session=sess,only_mask=True).resize((W,H),Image.BILINEAR).filter(ImageFilter.GaussianBlur(1.2))
+            mp="masks/"+name
+            if os.path.exists(mp): m=Image.open(mp)
+            else: m=remove(base.resize((432,768)),session=sess,only_mask=True); m.save(mp)
+            m=m.resize((W,H),Image.BILINEAR).filter(ImageFilter.GaussianBlur(1.2))
             img.alpha_composite(Image.open("back/"+name)); img=Image.composite(base.convert("RGBA"),img,m)
         if os.path.exists("front/"+name): img.alpha_composite(Image.open("front/"+name))
         if enc: enc.stdin.write(img.convert("RGB").tobytes())
