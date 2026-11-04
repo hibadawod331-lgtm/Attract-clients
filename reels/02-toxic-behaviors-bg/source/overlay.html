@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:600;src:url(montserrat-600.woff2)}@font-face{font-family:M;font-weight:700;src:url(montserrat-700.woff2)}@font-face{font-family:M;font-weight:800;src:url(montserrat-800.woff2)}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1920px;background:transparent;overflow:hidden}
+#cards{position:absolute;top:235px;left:0;right:0;display:flex;justify-content:center;gap:34px}
+.card{width:300px;height:375px;border-radius:22px;background-size:cover;background-position:center;box-shadow:0 18px 50px rgba(0,0,0,.55);border:4px solid rgba(255,255,255,.9)}
+#title{position:absolute;top:95px;left:70px;right:70px;text-align:center;font-family:M;font-weight:700;font-size:44px;line-height:1.25;color:#fff;
+ text-shadow:0 2px 6px rgba(0,0,0,.85),0 0 24px rgba(0,0,0,.6)}
+#cap{position:absolute;top:1230px;left:40px;right:40px;text-align:center;font-family:M;font-weight:800;font-size:86px;color:#fff;
+ text-shadow:0 3px 10px rgba(0,0,0,.7),0 0 26px rgba(0,0,0,.4)}
+</style></head><body>
+<div id="cards"><div class="card" id="c0"></div><div class="card" id="c1"></div></div><div id="title"></div><div id="cap"></div>
+<script>
+let TL=null,MODE='front';const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
+function setup(tl,mode){TL=tl;MODE=mode;document.getElementById('cards').style.display=mode==='back'?'':'none';
+ for(const id of ['title','cap'])document.getElementById(id).style.display=mode==='front'?'':'none';}
+function render(t){
+ const s=TL.sec.find(x=>t>=x[0]&&t<x[1])||TL.sec[TL.sec.length-1];
+ const p=ease((t-s[0])/0.5), o=Math.min(1,(s[1]-t)/0.25);
+ for(const i of [0,1]){const c=document.getElementById('c'+i);const q=ease((t-s[0]-i*0.15)/0.5);
+  c.style.backgroundImage=`url(img/${s[2]}_${i}.jpg)`;c.style.opacity=Math.min(q,o);
+  c.style.transform=`translateY(${(1-q)*-50}px) rotate(${(i?4:-4)*(1-q)+(i?2:-2)}deg) scale(${0.85+0.15*q})`;}
+ const ti=document.getElementById('title');ti.innerHTML=s[3];const tq=ease((t-s[0]-0.25)/0.45);ti.style.opacity=Math.min(tq,o);ti.style.transform=`translateY(${(1-tq)*20}px)`;
+ const c=TL.caps.find(x=>t>=x[1]&&t<x[2]);const cap=document.getElementById('cap');
+ if(c){const q=ease((t-c[1])/0.14);cap.textContent=c[0];cap.style.opacity=q;cap.style.transform=`scale(${0.8+0.2*q})`;cap.style.filter=`blur(${(1-q)*6}px)`}else cap.style.opacity=0;
+ return [s[2],Math.round(Math.min((t-s[0])/0.8,1)*24),Math.round(o*8),MODE==='front'?(c?c[0]+c[1]+Math.round(Math.min((t-c[1])/0.14,1)*6):''):''].join('|');}
+</script></body></html>
