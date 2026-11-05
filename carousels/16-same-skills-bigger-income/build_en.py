@@ -22,8 +22,8 @@ h = '<div class="h">@itscoachhiba</div>'
 s = ""
 for w, st in P:
     s += f'<section class="slide"><div class="pair"><p class="w">{w}</p><i></i><p class="s">{st}</p></div><img class="img" src="hands_en.png">{h}</section>'
-s += ('<section class="slide end"><div class="top"><p class="big">Your skills already make someone rich.</p>'
-      '<p class="big o">Make it you.</p></div><img class="img" src="coffee_en.png">'
+s += ('<section class="slide end"><div class="top"><p class="big">Your skills are already making someone rich.</p>'
+      '<p class="big o">Why not you?</p></div><img class="img" src="coffee_en.png">'
       '<div class="cta">Comment <b>BRAND</b> and I\'ll send you how to turn your skills into a digital business</div>' + h + '</section>')
 
 css = '''@font-face{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2)}
