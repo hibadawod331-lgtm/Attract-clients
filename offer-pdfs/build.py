@@ -53,6 +53,7 @@ table{width:100%;border-collapse:collapse;margin:8px 0 18px;font-size:10pt;line-
 th{background:#F2531E;color:#fff;font-weight:500;text-align:right;padding:7px 9px}
 td{border:1px solid #e3e3e3;padding:7px 9px;vertical-align:top;height:34px}
 tr{page-break-inside:avoid}
+tr.blank td{height:64px}
 .kv td:first-child{width:45%;font-weight:500;background:#FEF0EA}
 tr:nth-child(even) td{background:#fafafa}
 b,strong{font-weight:700}
@@ -111,7 +112,7 @@ def render(md):
                 b = "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
                 body.append(f'<table class="kv"><tbody>{b}</tbody></table>'); continue
             h = "".join(f"<th>{inline(c)}</th>" for c in rows[0])
-            b = "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
+            b = "".join(("<tr class=blank>" if not any(r) and len(r) > 3 else "<tr>") + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
             body.append(f"<table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table>"); continue
         else:
             body.append(f"<p>{inline(ln)}</p>")
