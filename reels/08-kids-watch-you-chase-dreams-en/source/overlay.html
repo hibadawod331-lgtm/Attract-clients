@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-700.woff2)}@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1920px;background:transparent;overflow:hidden}
+#cap{direction:ltr;position:absolute;top:1230px;left:40px;right:40px;text-align:center;font-family:M;font-weight:700;font-size:86px;color:#fff;
+ text-shadow:0 3px 10px rgba(0,0,0,.7),0 0 26px rgba(0,0,0,.4)}
+#hook{direction:ltr;text-wrap:balance;position:absolute;top:1080px;left:60px;right:60px;text-align:center;font-family:M;font-weight:700;font-size:72px;line-height:1.25;color:#fff;
+ text-shadow:0 3px 12px rgba(0,0,0,.8),0 0 30px rgba(0,0,0,.5)}#hook b{color:#F2531E;font-weight:700}
+</style></head><body>
+<div id="hook">Your kids will learn more from <b>watching you</b> chase your dreams than from hearing you tell them to chase theirs.</div><div id="cap"></div>
+<script>
+let TL=null;const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
+function setup(tl,mode){TL=tl;}
+function render(t){
+ const hk=document.getElementById('hook');const isHook=t<TL.hook_end;
+ const hq=ease(t/0.4),ho=Math.min(1,(TL.hook_end-t)/0.25);
+ hk.style.opacity=isHook?Math.min(hq,ho):0;hk.style.transform=`scale(${0.92+0.08*hq})`;
+ const c=isHook?null:TL.caps.find(x=>t>=x[1]&&t<x[2]);const cap=document.getElementById('cap');
+ if(c){const q=ease((t-c[1])/0.14);cap.textContent=c[0];cap.style.opacity=q;cap.style.transform=`scale(${0.8+0.2*q})`;cap.style.filter=`blur(${(1-q)*6}px)`}else cap.style.opacity=0;
+ return [isHook?Math.round(Math.min(hq,ho)*20):'',c?c[0]+c[1]+Math.round(Math.min((t-c[1])/0.14,1)*6):''].join('|');}
+</script></body></html>
