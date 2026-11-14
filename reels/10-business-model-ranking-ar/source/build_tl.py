@@ -1,6 +1,6 @@
 import json
 parts=json.load(open('cut.json'))
-frames=[158,109,199,227,397,80,328,480,80]
+frames=[173,74,203,221,426,80,302,469,80]
 off=[0];[off.append(off[-1]+f) for f in frames]
 start=[o/30 for o in off]
 def M(k,t): return round(t-parts[k]['v0']+start[k],2)

@@ -2,18 +2,18 @@
 @font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-700.woff2)}@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:M;font-weight:500;src:url(ibm-plex-sans-arabic-500.woff2)}@font-face{font-family:M;font-weight:500;src:url(ibm-plex-sans-arabic-latin-500.woff2);unicode-range:U+0000-00FF}
 *{margin:0;box-sizing:border-box}html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:M}
-#title{direction:rtl;position:absolute;top:170px;left:90px;right:90px;text-align:center;background:#fff;color:#111;font-weight:700;font-size:56px;line-height:1.3;padding:22px 30px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+#title{direction:rtl;position:absolute;top:780px;left:90px;right:90px;text-align:center;background:#fff;color:#111;font-weight:700;font-size:56px;line-height:1.3;padding:22px 30px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
 #title b{color:#F2531E}
-#list{position:absolute;top:430px;right:36px}
-.row{position:absolute;right:0;width:250px;height:100px}
-.num{position:absolute;right:0;top:0;width:100px;height:100px;border-radius:50%;background:#F2531E;color:#fff;font-weight:700;font-size:54px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3);border:4px solid rgba(255,255,255,.85)}
-.slot{position:absolute;right:118px;top:6px;width:88px;height:88px;border-radius:50%;border:3px dashed rgba(255,255,255,.75);background:rgba(0,0,0,.18)}
+#list{position:absolute;top:430px;left:36px}
+.row{position:absolute;left:0;width:250px;height:100px}
+.num{position:absolute;left:0;top:0;width:100px;height:100px;border-radius:50%;background:#F2531E;color:#fff;font-weight:700;font-size:54px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3);border:4px solid rgba(255,255,255,.85)}
+.slot{position:absolute;left:118px;top:6px;width:88px;height:88px;border-radius:50%;border:3px dashed rgba(255,255,255,.75);background:rgba(0,0,0,.18)}
 .slot svg{width:100%;height:100%;padding:16px}
-#q{direction:rtl;position:absolute;top:1230px;left:60px;right:300px;text-align:center;color:#fff;font-weight:700;font-size:66px;text-shadow:0 3px 12px rgba(0,0,0,.75)}
+#q{direction:rtl;position:absolute;top:1250px;left:300px;right:150px;text-align:center;color:#fff;font-weight:700;font-size:66px;text-shadow:0 3px 12px rgba(0,0,0,.75)}
 #big{position:absolute;width:220px;height:220px}
 #big svg{width:100%;height:100%;filter:drop-shadow(0 6px 16px rgba(0,0,0,.6))}
 #rank{position:absolute;top:1340px;left:110px;width:170px;height:170px;border-radius:50%;background:#F2531E;color:#fff;font-weight:700;font-size:110px;display:flex;align-items:center;justify-content:center;border:6px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.4)}
-#cap{direction:rtl;position:absolute;top:1640px;left:40px;right:40px;text-align:center;font-weight:700;font-size:74px;color:#fff;text-shadow:0 3px 10px rgba(0,0,0,.75),0 0 26px rgba(0,0,0,.45)}
+#cap{direction:rtl;position:absolute;top:960px;left:40px;right:40px;text-align:center;font-weight:700;font-size:74px;color:#fff;text-shadow:0 3px 10px rgba(0,0,0,.75),0 0 26px rgba(0,0,0,.45)}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <g id="ugc" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="30" width="58" height="44" rx="8"/><path d="M72 44 L88 34 V70 L72 60"/><circle cx="43" cy="52" r="10"/></g>
@@ -32,7 +32,7 @@ const ROW=118,LT=430,RT=36,CX=540,CY=1430;
 function setup(tl){TL=tl;const L=document.getElementById('list');
  for(let n=1;n<=7;n++){const r=document.createElement('div');r.className='row';r.style.top=((n-1)*ROW)+'px';
   r.innerHTML=`<div class="slot" id="s${n}"></div><div class="num">${n}</div>`;L.appendChild(r);}}
-function slotXY(n){return [1080-RT-118-44, LT+(n-1)*ROW+6+44];}
+function slotXY(n){return [RT+118+44, LT+(n-1)*ROW+6+44];}
 function render(t){
  const ti=document.getElementById('title');ti.style.opacity=t<TL.title_end?Math.min(ease(t/0.35),(TL.title_end-t)/0.25):0;
  const L=document.getElementById('list');L.style.opacity=t<TL.title_end-0.4?0:Math.min(1,ease((t-TL.title_end+0.4)/0.4));
