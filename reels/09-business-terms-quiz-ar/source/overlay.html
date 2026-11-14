@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-700.woff2)}@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}
+@font-face{font-family:M;font-weight:500;src:url(ibm-plex-sans-arabic-500.woff2)}@font-face{font-family:M;font-weight:500;src:url(ibm-plex-sans-arabic-latin-500.woff2);unicode-range:U+0000-00FF}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:M}
+#title{direction:rtl;position:absolute;top:150px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#fff;color:#111;font-weight:700;font-size:50px;padding:16px 34px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+#title b{color:#F2531E}
+#card{position:absolute;top:1010px;left:110px;width:860px;background:#fff;border-radius:28px;box-shadow:0 22px 60px rgba(0,0,0,.35);padding:30px 34px 26px;text-align:center}
+#ct{font-weight:700;font-size:60px;line-height:1.15;color:#111}
+#cs{font-weight:500;font-size:34px;color:#F2531E;margin-top:6px}
+#ci{width:100%;height:390px;object-fit:contain;margin-top:14px}
+#cap{direction:rtl;position:absolute;top:1230px;left:40px;right:40px;text-align:center;font-weight:700;font-size:86px;color:#fff;
+ text-shadow:0 3px 10px rgba(0,0,0,.7),0 0 26px rgba(0,0,0,.4)}
+</style></head><body>
+<div id="title">يلا نشوف قديش إنتي <b>شاطرة بالبزنس</b></div>
+<div id="card"><div id="ct"></div><div id="cs"></div><img id="ci"></div><div id="cap"></div>
+<script>
+let TL=null;const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
+const imgs={};
+async function setup(tl,mode){TL=tl;await Promise.all([...Array(12)].map((_,i)=>{const im=new Image();im.src='img/'+(i+1)+'.jpg';imgs[i+1]=im;return im.decode()}));}
+function render(t){
+ const ti=document.getElementById('title');const tq=ease(t/0.35),to=Math.min(1,(TL.list_end+0.3-t)/0.3);
+ ti.style.opacity=t<TL.list_end+0.3?Math.min(tq,to):0;
+ const k=TL.cards.find(x=>t>=x[0]&&t<x[1]);const cd=document.getElementById('card');
+ let key='';
+ if(k){const q=ease((t-k[0])/0.18);cd.style.display='';cd.style.opacity=Math.min(1,0.4+q);
+  cd.style.transform=`scale(${0.88+0.12*q}) rotate(${(k[2]%2?-1:1)*1.5*(1-q)}deg)`;
+  document.getElementById('ct').textContent=k[3];const sub=document.getElementById('cs');sub.textContent=k[4];
+  sub.style.direction=/[a-z]/i.test(k[4])?'ltr':'rtl';document.getElementById('ct').style.direction=/[a-z]/i.test(k[3])?'ltr':'rtl';
+  document.getElementById('ci').src='img/'+k[2]+'.jpg';key='k'+k[2]+'_'+Math.round(Math.min((t-k[0])/0.18,1)*8);}
+ else cd.style.display='none';
+ const c=TL.caps.find(x=>t>=x[1]&&t<x[2]);const cap=document.getElementById('cap');
+ if(c){const q=ease((t-c[1])/0.14);cap.textContent=c[0];cap.style.opacity=q;cap.style.transform=`scale(${0.8+0.2*q})`;cap.style.filter=`blur(${(1-q)*6}px)`}else cap.style.opacity=0;
+ return [Math.round(ti.style.opacity*20),key,c?c[0]+c[1]+Math.round(Math.min((t-c[1])/0.14,1)*6):''].join('|');}
+</script></body></html>
