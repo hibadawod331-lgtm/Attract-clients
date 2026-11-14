@@ -30,6 +30,11 @@ slides = [
      f"علقي بكلمة {o('«مكالمة»')} لتحجزي مكالمة استشارية مجانية."],
 ]
 
+import re
+def clean(t):
+    t = re.sub("[أإآ]", "ا", t)
+    return t.replace("،", "").replace(", ", " ").replace(",", "")
+slides = [[clean(p) for p in ps] for ps in slides]
 html = ['''<section class="slide cover"><img src="cover.jpg"><div class="shade"></div>
 <h1>ليش العملاء اللي بيجوكي دايما بيقولولك <span>«سعرك غالي عليي»</span>؟</h1></section>''']
 for ps in slides:
