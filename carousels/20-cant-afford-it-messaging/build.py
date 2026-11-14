@@ -33,7 +33,12 @@ slides = [
 import re
 def clean(t):
     t = re.sub("[أإآ]", "ا", t)
-    return t.replace("،", "").replace(", ", " ").replace(",", "")
+    t = t.replace("،", "").replace(", ", " ").replace(",", "")
+    t = re.sub(r"^…", "", t)
+    t = re.sub(r"…(</em>)?$", r".\1", t)
+    t = re.sub(r"…(</em>)?$", r"\1", t)
+    t = re.sub(r"…\s*", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
 slides = [[clean(p) for p in ps] for ps in slides]
 html = ['''<section class="slide cover"><img src="cover.jpg"><div class="shade"></div>
 <h1>ليش العملاء اللي بيجوكي دايما بيقولولك <span>«سعرك غالي عليي»</span>؟</h1></section>''']
