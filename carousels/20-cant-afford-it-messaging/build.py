@@ -2,7 +2,8 @@
 Run, then: node shotall.js <this dir>"""
 O = "#F2531E"
 o = lambda t: f'<em>{t}</em>'
-H = '<div class="h">@itscoachhiba</div>'
+H = '<div class="foot"><img src="avatar.png"><div><b>Itscoachhiba</b><span>@itscoachhiba</span></div></div>'
+ARROW = '<svg class="swipe" viewBox="0 0 120 60"><path d="M100 30 H18 M40 10 L18 30 L40 50" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
 slides = [
     ["ما في شي أصعب من إنك تحكي مع وحدة باين عليها متحمسة تشتغل معك…",
@@ -42,8 +43,8 @@ def clean(t):
 slides = [[clean(p) for p in ps] for ps in slides]
 html = ['''<section class="slide cover"><img src="cover.jpg"><div class="shade"></div>
 <h1>ليش العملاء اللي بيجوكي دايما بيقولولك <span>«سعرك غالي عليي»</span>؟</h1></section>''']
-for ps in slides:
-    html.append('<section class="slide txt"><div class="box">' + "".join(f"<p>{p}</p>" for p in ps) + f'</div>{H}</section>')
+for k, ps in enumerate(slides):
+    html.append('<section class="slide txt"><div class="box">' + "".join(f"<p>{p}</p>" for p in ps) + f'</div>{H}{ARROW if k < len(slides)-1 else ""}</section>')
 
 css = f'''@font-face{{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-700.woff2)}}@font-face{{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}}
 @font-face{{font-family:P;font-weight:500;src:url(ibm-plex-sans-arabic-500.woff2)}}@font-face{{font-family:P;font-weight:500;src:url(ibm-plex-sans-arabic-latin-500.woff2);unicode-range:U+0000-00FF}}
@@ -58,6 +59,9 @@ css = f'''@font-face{{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic
 .txt p{{font-weight:500;font-size:46px;line-height:1.5}}
 .txt b{{font-weight:700}}
 .txt em{{font-style:normal;color:{O};font-weight:700}}
-.h{{position:absolute;bottom:90px;left:0;right:0;text-align:center;font-weight:700;font-size:28px;color:#f2f2f2;direction:ltr}}'''
+.foot{{position:absolute;left:60px;bottom:60px;display:flex;align-items:center;gap:22px;direction:ltr;color:#fff}}
+.foot img{{width:104px;height:104px;border-radius:50%;border:3px solid #333}}
+.foot div{{display:flex;flex-direction:column;text-align:left}}.foot b{{font-weight:700;font-size:40px}}.foot span{{font-weight:500;font-size:30px;color:#bbb}}
+.swipe{{position:absolute;right:70px;bottom:80px;width:110px}}'''
 open("carousel.html", "w", encoding="utf-8").write(
     f'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(html)}</body></html>')
