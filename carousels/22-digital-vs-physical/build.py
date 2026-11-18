@@ -18,11 +18,11 @@ slides = [
     # 2 difference
     f'''<img class="vis" src="v2.jpg">
 <p class="big">شو الفرق؟</p>
-<p><b>المنتج الفعلي</b> شي بينلمس: ملابس مكياج شموع اكسسوارات</p>
+<p><b>المنتج الملموس</b> شي بينلمس: ملابس مكياج شموع اكسسوارات</p>
 <p><b class="o">المنتج الرقمي</b> شي بيتحمل او بينحضر اونلاين: كورس كتاب الكتروني تمبلت ورشة برنامج كوتشينغ</p>''',
     # 3 physical
     f'''<img class="vis" src="v3.jpg">
-<p class="big">المنتج الفعلي بيحتاج:</p>
+<p class="big">المنتج الملموس بيحتاج:</p>
 {ul(["راس مال من البداية", "مخزون وتخزين", "شحن وتغليف ومرتجعات", "ربح اقل بكل قطعة بعد التكاليف"], "x")}
 <p>وكل ما بدك تبيعي اكتر لازم تصنعي او تشتري اكتر</p>''',
     # 4 digital
@@ -82,7 +82,7 @@ slides = [
 slides = [clean(s) for s in slides]
 
 html = [f'''<section class="slide cover"><img class="bg" src="cover.jpg"><div class="shade"></div>
-<h1>منتجات رقمية ولا منتجات فعلية؟</h1><div class="sub">وين لازم تحطي وقتك وطاقتك بـ {D('2026')}</div></section>''']
+<h1>منتجات رقمية ولا منتجات ملموسة؟</h1><div class="sub">وين لازم تحطي وقتك وطاقتك بـ {D('2026')}</div></section>''']
 for k, s in enumerate(slides):
     html.append(f'<section class="slide txt"><div class="box">{s}</div>{FOOT}{ARROW if k < len(slides)-1 else ""}</section>')
 
