@@ -38,7 +38,21 @@ slides = [
     # 6 market + proof
     f'''<p class="big">وما رح تكوني لحالك بهالسوق</p>
 <p>سوق التعليم الاونلاين لحاله مقدر بحوالي {o(D('$276') + ' مليار')} بـ {D('2026')} ومتوقع يوصل لاكتر من {o(D('$500') + ' مليار')} بـ {D('2032')}</p>
-<img class="proof" src="proof.jpg">
+<div class="chart"><div class="ch-l">
+<div class="ch-t">سوق التعليم الاونلاين</div><div class="ch-s">حجم السوق بمليارات الدولارات</div>
+<div class="bars">
+<div class="bar"><span class="v">{D('$275.9')}</span><i style="height:163px"></i><span class="y">{D('2026')}</span></div>
+<div class="bar"><span class="v">{D('$305.8')}</span><i style="height:181px"></i><span class="y">{D('2027')}</span></div>
+<div class="gap"><span class="cagr">نمو سنوي<br><b>{D('10.62%')}</b></span></div>
+<div class="bar big"><span class="v">{D('$506.6')}</span><i style="height:300px"></i><span class="y">{D('2032')}</span></div>
+</div></div>
+<div class="ch-r">
+<div class="st"><span>حجم السوق {D('2027')}</span><b>{D('$305.8')} مليار</b></div>
+<div class="st"><span>حجم السوق {D('2032')}</span><b>{D('$506.6')} مليار</b></div>
+<div class="st"><span>نسبة النمو السنوي</span><b>{D('10.62%')}</b></div>
+<div class="st"><span>اكبر سوق</span><b>امريكا الشمالية</b></div>
+<div class="st"><span>الاسرع نموا</span><b>اسيا والمحيط الهادئ</b></div>
+</div></div>
 <p class="src">المصدر: {D('Mordor Intelligence')}</p>
 <p>واقتصاد صناع المحتوى متوقع يتعدى {o(D('$500') + ' مليار')} بـ {D('2030')}</p>''',
     # 7 why pick
@@ -83,7 +97,16 @@ css = f'''@font-face{{font-family:P;font-weight:700;src:url(ibm-plex-sans-arabic
 .txt{{background:#000;color:#fff}}
 .txt .box{{position:absolute;top:50px;bottom:190px;left:80px;right:80px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;text-align:center}}
 .vis{{width:920px;height:470px;object-fit:cover;border-radius:28px;margin-bottom:10px}}
-.proof{{width:920px;border-radius:18px}}
+.chart{{width:920px;background:#fff;color:#111;border-radius:22px;padding:26px 28px;display:flex;gap:26px;text-align:right}}
+.ch-l{{flex:1.15}}.ch-r{{flex:1;display:flex;flex-direction:column;gap:12px;border-right:2px solid #eee;padding-right:24px}}
+.ch-t{{font-weight:700;font-size:30px}}.ch-s{{font-weight:500;font-size:22px;color:#777}}
+.bars{{display:flex;align-items:flex-end;gap:18px;height:400px;border-bottom:2px solid #ddd;margin:6px 0 44px;direction:ltr}}
+.bar{{display:flex;flex-direction:column;align-items:center;width:84px;position:relative}}
+.bar i{{display:block;width:72px;border-radius:8px 8px 0 0;background:linear-gradient(#ff8a5c,{O})}}
+.bar .v{{font-weight:700;font-size:24px;margin-bottom:6px}}.bar .y{{position:absolute;bottom:-38px;font-weight:700;font-size:24px;color:#444}}
+.gap{{flex:1;align-self:center;text-align:center}}.cagr{{font-weight:500;font-size:22px;color:#666;direction:rtl;display:block}}.cagr b{{font-size:34px;color:{O}}}
+.st{{display:flex;flex-direction:column;border-bottom:1px solid #eee;padding-bottom:8px}}.st span{{font-weight:500;font-size:22px;color:#777}}.st b{{font-weight:700;font-size:28px;color:#111}}
+.src{{margin-top:22px!important}}
 .src{{font-size:28px!important;color:#999;margin-top:-10px}}
 .txt p{{font-weight:500;font-size:40px;line-height:1.45}}
 .txt .big{{font-weight:700;font-size:54px;line-height:1.3}}
