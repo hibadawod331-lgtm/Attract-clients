@@ -93,7 +93,7 @@ def render():
     enc.stdin.close(); enc.wait()
     # audio
     ins, flt, lab = ["-i", "music.mp3"], [], []
-    flt.append(f"[1:a]volume=0.22,afade=t=in:d=1,afade=t=out:st={dur-2.5}:d=2.5,atrim=0:{dur}[m]")
+    flt.append(f"[1:a]volume=0,afade=t=in:d=1,afade=t=out:st={dur-2.5}:d=2.5,atrim=0:{dur}[m]")
     j = 2
     for (img, d, mv, cap, vs, ex), t0 in zip(S, st):
         if mv.startswith("clip:s"):
