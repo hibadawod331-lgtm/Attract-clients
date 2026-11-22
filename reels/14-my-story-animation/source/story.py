@@ -6,22 +6,22 @@ FPS, W, H = 30, 1080, 1920
 O = lambda t: f"<b>{t}</b>"
 # (image, duration, motion, caption, [(voice, offset)], extras)
 S = [
- ("s01", 2.6, "in",   "كنت كاشيرة بسوبرماركت بهولندا", [], []),
- ("s02", 2.6, "out",  "وبنفس الوقت عم ادرس مساعدة طبيب اسنان", [], []),
- ("s03", 3.0, "in",   "وكل ليلة كنت شوف بنات عايشين الحياة اللي بحلم فيها", [], []),
+ ("s01", 3.2, "clip:m01",   "كنت كاشيرة بسوبرماركت بهولندا", [], []),
+ ("s02", 3.2, "clip:m02",  "وبنفس الوقت عم ادرس مساعدة طبيب اسنان", [], []),
+ ("s03", 2.6, "clip:m03",   "وكل ليلة كنت شوف بنات عايشين الحياة اللي بحلم فيها", [], []),
  ("s04", 107/30, "clip:s04", "ماما… بدي اترك الشغل والمدرسة كمان", [], []),
  ("s05", 136/30, "clip:s05", "شو؟! هاد دخلك الوحيد يا ماما! كيف بدك تعيشي؟", [], []),
  ("s06", 156/30, "clip:s06", "اعطوني ست شهور بس… بوعدك انا قدها|واذا ما نجحت برجع عالمدرسة", [], []),
- ("s07", 2.8, "panr", "تركت الشغل والمدرسة… وبلشت من الصفر", [], []),
- ("s08", 2.4, "in",   "كل يوم عم ابني حالي", [], []),
- ("s09", 2.2, "out",  "سهر… وتعب", [], []),
- ("s10", 2.8, "in",   f"خلال {O('6 شهور')}", [], []),
- ("s11", 2.4, "in", None, [], []),
+ ("s07", 2.6, "clip:m07", "تركت الشغل والمدرسة… وبلشت من الصفر", [], []),
+ ("s08", 2.8, "clip:m08",   "كل يوم عم ابني حالي", [], []),
+ ("s09", 2.6, "clip:m09",  "سهر… وتعب", [], []),
+ ("s10", 3.0, "clip:m10",   f"خلال {O('6 شهور')}", [], []),
+ ("s11", 3.0, "clip:m11", None, [], []),
  ("s11", 122/30, "clip:s11", "يلا نعلّم البنات كيف يعملوا نفس الشي!", [], []),
- ("s12", 3.6, "out",  "وصرت علّم البنات", [], ["badges"]),
- ("s13", 10.6, "panl", None, [("6-woman1", 0.3), ("7-woman2", 3.5), ("8-woman3", 7.3)], []),
- ("s14", 3.0, "in",   "وبعدها تزوجت شريك حياتي", [], []),
- ("s15", 3.8, "in",   "وانتقلنا عبلد احلامنا|ومننتظر بنوتتنا", [], []),
+ ("s12", 3.6, "clip:m12",  "وصرت علّم البنات", [], ["badges"]),
+ ("s13", 10.6, "clip:m13", None, [("6-woman1", 0.3), ("7-woman2", 3.5), ("8-woman3", 7.3)], []),
+ ("s14", 3.0, "clip:m14",   "وبعدها تزوجت شريك حياتي", [], []),
+ ("s15", 3.8, "clip:m15",   "وانتقلنا عبلد احلامنا|ومننتظر بنوتتنا", [], []),
  ("s16", 166/30+1.2, "clip:s16", "من كاشيرة بالسوبرماركت… لهون|وهلق دورك انتي", [], []),
 ]
 CAP13 = [("شكرا كتير الك… كتير استفدنا", 0.3, 3.4), ("والله غيرتيلي حياتي… ما بعرف كيف بدي اشكرك", 3.5, 7.2),
@@ -55,7 +55,7 @@ def render():
     capimg = [Image.open(f"caps/c{i:02d}.png") for i in range(len(pl["caps"]))]
     badimg = [Image.open(f"caps/b{i}.png") for i in range(3)]
     srcs = {s[0]: Image.open(f"img/{s[0]}.jpg") for s in S}
-    NF = {c: len(os.listdir(f"clips/fr_{c}")) for c in ["s04","s05","s06","s11","s16"]}
+    NF = {c: len(os.listdir(f"clips/fr_{c}")) for c in os.listdir("clips") and [x[3:] for x in os.listdir("clips") if x.startswith("fr_")]}
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                             "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "video.mp4"], stdin=subprocess.PIPE)
     ease = lambda x: x * x * (3 - 2 * x)
@@ -65,7 +65,10 @@ def render():
         img, d, mv = S[k][0], S[k][1], S[k][2]
         p = ease(min(1, (t - st[k]) / d))
         if mv.startswith("clip:"):
-            c = mv[5:]; fi = min(int((t - st[k]) * FPS) + 1, NF[c])
+            c = mv[5:]; n = int((t - st[k]) * FPS); L = NF[c]
+            if c.startswith("m") and L > 1:
+                per = 2 * (L - 1); q = n % per; fi = (q if q < L else per - q) + 1
+            else: fi = min(n + 1, L)
             fr = Image.open(f"clips/fr_{c}/{fi:04d}.jpg").convert("RGBA")
         else:
           src = srcs[img]; sw, sh = src.size
@@ -93,7 +96,7 @@ def render():
     flt.append(f"[1:a]volume=0.22,afade=t=in:d=1,afade=t=out:st={dur-2.5}:d=2.5,atrim=0:{dur}[m]")
     j = 2
     for (img, d, mv, cap, vs, ex), t0 in zip(S, st):
-        if mv.startswith("clip:"):
+        if mv.startswith("clip:s"):
             ins += ["-i", f"clips/n_{mv[5:]}.mp4"]; ms = int(t0 * 1000)
             flt.append(f"[{j}:a]adelay={ms}|{ms},volume=1.0[v{j}]"); lab.append(f"[v{j}]"); j += 1
         for v, off in vs:
