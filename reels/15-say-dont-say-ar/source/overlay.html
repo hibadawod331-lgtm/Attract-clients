@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-700.woff2)}@font-face{font-family:M;font-weight:700;src:url(ibm-plex-sans-arabic-latin-700.woff2);unicode-range:U+0000-00FF}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:M}
+#tab{position:absolute;top:1110px;left:0;right:0;height:640px}
+.col{position:absolute;top:0;width:400px}
+#dont{right:70px}#do{left:70px}
+.hd{direction:rtl;text-align:center;font-weight:700;font-size:64px;color:#fff;height:96px;line-height:96px;
+ text-shadow:0 3px 10px rgba(0,0,0,.75)}
+.hd .m{color:#6B0F2A;-webkit-text-stroke:8px #fff;paint-order:stroke fill;text-shadow:0 3px 10px rgba(0,0,0,.45)}
+.hd .g{color:#1F4D38;-webkit-text-stroke:8px #fff;paint-order:stroke fill;text-shadow:0 3px 10px rgba(0,0,0,.45)}
+.cell{position:relative;height:88px;margin-bottom:12px;overflow:hidden}
+.w{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;direction:rtl;color:#fff;font-weight:700;font-size:54px;
+ text-shadow:0 3px 10px rgba(0,0,0,.85),0 0 22px rgba(0,0,0,.5);white-space:nowrap}
+.bar{position:absolute;inset:0;border-radius:4px}
+#dont .bar{background:#4A0B1F}#do .bar{background:#173A2B}
+#ig{position:absolute;display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;font-weight:700;font-size:24px;letter-spacing:1px;
+ text-shadow:0 2px 6px rgba(0,0,0,.7);direction:ltr}
+#ig svg{width:58px;height:58px}
+#cap{direction:rtl;position:absolute;top:1300px;left:40px;right:40px;text-align:center;font-weight:700;font-size:96px;color:#fff;
+ text-shadow:0 4px 12px rgba(0,0,0,.8),0 0 30px rgba(0,0,0,.45)}
+</style></head><body>
+<div id="ig"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="#fff" stroke="none"/></svg><span>@ITSCOACHHIBA</span></div>
+<div id="tab"><div class="col" id="dont"><div class="hd"><span class="m">لا</span> تقولي</div></div><div class="col" id="do"><div class="hd"><span class="g">قولي</span></div></div></div>
+<div id="cap"></div>
+<script>
+let TL=null;const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
+function setup(tl){TL=tl;
+ for(const [k,side] of [[0,'dont'],[2,'do']]){const c=document.getElementById(side);
+  TL.rows.forEach((r,i)=>{const d=document.createElement('div');d.className='cell';d.innerHTML=`<div class="w">${r[k]}</div><div class="bar" id="${side}${i}"></div>`;c.appendChild(d);});}}
+const IGPOS=[[640,470],[700,1000],[90,1000],[640,470]];
+function render(t){
+ const key=[];
+ const tab=document.getElementById('tab');const vis=t<TL.table_end?1:Math.max(0,1-(t-TL.table_end)/0.3);
+ tab.style.opacity=vis;key.push(Math.round(vis*10));
+ TL.rows.forEach((r,i)=>{for(const [side,ts,dir] of [['dont',r[1],1],['do',r[3],-1]]){
+   const p=ease((t-ts+0.05)/0.35);const b=document.getElementById(side+i);
+   b.style.transform=`translateX(${dir*p*105}%)`;key.push(Math.round(p*20));}});
+ const seg=Math.floor(t/9)%IGPOS.length;const ig=document.getElementById('ig');
+ ig.style.left=IGPOS[seg][0]+'px';ig.style.top=IGPOS[seg][1]+'px';key.push(seg);
+ const c=t>=TL.table_end?TL.caps.find(x=>t>=x[1]&&t<x[2]):null;const cap=document.getElementById('cap');
+ if(c){const q=ease((t-c[1])/0.14);cap.textContent=c[0];cap.style.opacity=q;cap.style.transform=`scale(${0.8+0.2*q})`;key.push(c[0]+c[1]+Math.round(Math.min((t-c[1])/0.14,1)*6))}else cap.style.opacity=0;
+ return key.join('|');}
+</script></body></html>
